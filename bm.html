@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>게임사 BM 정리 · VNG Korea Office</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --panel:#ffffff; --ink:#1f2430; --muted:#8a92a6; --line:#e6e8ee;
+    --brand:#ec5e28; --brand-soft:#fff1ea;
+    --accent:#3b5bdb; --accent-soft:#edf0ff;
+    --ok:#2f9e44; --warn:#e8590c; --bad:#e03131;
+    --shadow:0 1px 3px rgba(20,30,60,.06),0 6px 20px rgba(20,30,60,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:"Pretendard","Malgun Gothic","Segoe UI",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .site-nav{background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 1px 3px rgba(20,30,60,.04)}
+  .site-nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px;height:60px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand-mark{font-weight:900;font-size:26px;letter-spacing:-.06em;color:var(--brand);line-height:1}
+  .brand-div{width:1px;height:22px;background:var(--line)}
+  .brand-sub{font-size:13px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .nav-links{display:flex;gap:6px}
+  .nav-links a{padding:8px 14px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted)}
+  .nav-links a:hover{background:var(--bg);color:var(--ink)}
+  .nav-links a.active{background:var(--brand-soft);color:var(--brand)}
+
+  .shell{max-width:1280px;margin:0 auto;padding:20px;display:grid;grid-template-columns:248px 1fr;gap:20px;align-items:start}
+  @media (max-width:860px){.shell{grid-template-columns:1fr}}
+
+  /* sidebar */
+  .side{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;position:sticky;top:20px}
+  .side h1{font-size:14px;margin:0;padding:15px 16px;border-bottom:1px solid var(--line);letter-spacing:-.01em}
+  .side .co{padding:6px 0}
+  .side .co-name{display:flex;align-items:center;gap:7px;padding:9px 16px 5px;font-size:12px;font-weight:800;color:var(--brand);letter-spacing:.02em}
+  .side .co-name .logo{width:16px;height:16px;border-radius:4px;background:var(--brand);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .side a.g{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 16px 8px 30px;font-size:13.5px;color:var(--ink);cursor:pointer;border-left:3px solid transparent}
+  .side a.g:hover{background:var(--bg)}
+  .side a.g.active{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand);font-weight:700}
+  .side a.g .yr{font-size:10.5px;color:var(--muted)}
+  .side a.g.active .yr{color:var(--brand)}
+  .side a.overview{padding-left:16px;font-weight:600}
+  .side .soon{padding:8px 16px;font-size:12px;color:var(--muted)}
+
+  /* main */
+  .main{min-width:0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px 24px;margin-bottom:16px}
+  .ghead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .ghead h2{font-size:24px;margin:0;letter-spacing:-.02em}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--bg);color:var(--muted)}
+  .oneliner{color:var(--ink);font-size:15px;margin:4px 0 0;opacity:.85}
+
+  .outcome{background:linear-gradient(180deg,#fff8f4,#fff);border:1px solid #ffd9c7;border-radius:14px;padding:18px 22px;margin-bottom:16px}
+  .outcome h3{margin:0 0 10px;font-size:15px;color:var(--brand);display:flex;align-items:center;gap:7px}
+  .outcome ul{margin:0;padding-left:20px}
+  .outcome li{margin:5px 0;font-size:14px}
+  .knums{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .knum{background:#fff;border:1px solid #ffd9c7;border-radius:9px;padding:6px 12px;font-size:12.5px;font-weight:600;color:var(--warn)}
+
+  .sec-title{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.04em;margin:0 0 12px}
+  .bm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+  .bm-item{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:#fcfcfd}
+  .bm-item .n{font-size:14px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+  .bm-item .n::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none}
+  .bm-item .d{font-size:13px;color:#4b5266;line-height:1.5}
+
+  .sources{margin-top:6px}
+  .sources h4{font-size:12px;color:var(--muted);margin:0 0 6px}
+  .sources a{display:inline-block;font-size:12px;color:var(--accent);margin:0 10px 4px 0}
+  .notes{font-size:13px;color:#4b5266}
+  .notes li{margin:4px 0}
+
+  .loading{padding:60px;text-align:center;color:var(--muted)}
+  .disc{max-width:1280px;margin:0 auto;padding:0 20px 40px;font-size:11.5px;color:var(--muted);line-height:1.7}
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">VNG</span>
+      <span class="brand-div"></span>
+      <span class="brand-sub">Korea Office</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">📅 미팅 캘린더</a>
+      <a href="bm.html" class="active">🎮 게임사 BM</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="side" id="side"><div class="loading">불러오는 중…</div></aside>
+  <main class="main" id="main"><div class="card"><div class="loading">불러오는 중…</div></div></main>
+</div>
+<div class="disc" id="disc"></div>
+
+<script>
+let DB=null, CUR=null;   // CUR = "overview:ncsoft" | "game:ncsoft/lineagem"
+
+function esc(s){return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+function renderSide(){
+  let html=`<h1>🎮 게임사 BM 정리</h1>`;
+  for(const co of DB.companies){
+    html+=`<div class="co"><div class="co-name"><span class="logo">${esc(co.name.slice(0,2))}</span>${esc(co.name)}</div>`;
+    if(co.overview) html+=`<a class="g overview ${CUR==='overview:'+co.id?'active':''}" data-key="overview:${co.id}">📌 회사 개요</a>`;
+    for(const g of (co.games||[])){
+      const key="game:"+co.id+"/"+g.id;
+      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
+    }
+    html+=`</div>`;
+  }
+  html+=`<div class="soon">더 많은 게임사 준비 중…</div>`;
+  const side=document.getElementById("side");
+  side.innerHTML=html;
+  side.querySelectorAll("a.g").forEach(a=>a.addEventListener("click",()=>{location.hash=a.dataset.key;}));
+}
+
+function findGame(coId,gId){
+  const co=DB.companies.find(c=>c.id===coId); if(!co) return null;
+  const g=(co.games||[]).find(x=>x.id===gId); return g?{co,g}:null;
+}
+
+function renderMain(){
+  const main=document.getElementById("main");
+  if(CUR && CUR.startsWith("overview:")){
+    const co=DB.companies.find(c=>c.id===CUR.slice(9));
+    if(co && co.overview){
+      main.innerHTML=`<div class="card">
+        <div class="ghead"><h2>${esc(co.name)} · 회사 개요</h2></div>
+        <p class="oneliner">${esc(co.overview.tagline||"")}</p></div>
+        <div class="card"><p class="sec-title">BM 전략 흐름</p><ul class="notes">${(co.overview.summary||[]).map(s=>`<li>${esc(s)}</li>`).join("")}</ul></div>
+        ${sourcesHtml(co.overview.sources)}`;
+      return;
+    }
+  }
+  const parts=(CUR||"").replace("game:","").split("/");
+  const found=findGame(parts[0],parts[1]);
+  if(!found){ main.innerHTML=`<div class="card"><div class="loading">왼쪽에서 게임을 선택하세요.</div></div>`; return; }
+  const g=found.g;
+  const badges=[g.year,g.platform].filter(Boolean).map(b=>`<span class="badge">${esc(b)}</span>`).join(" ");
+  let html=`<div class="card">
+      <div class="ghead"><h2>${esc(g.name)}</h2>${badges}</div>
+      ${g.oneLiner?`<p class="oneliner">${esc(g.oneLiner)}</p>`:""}
+    </div>`;
+
+  if(g.outcome && g.outcome.length){
+    html+=`<div class="outcome"><h3>📊 BM 도입 성과 · 아웃컴</h3>
+      <ul>${g.outcome.map(o=>`<li>${esc(o)}</li>`).join("")}</ul>
+      ${(g.keyNumbers&&g.keyNumbers.length)?`<div class="knums">${g.keyNumbers.map(k=>`<span class="knum">${esc(k)}</span>`).join("")}</div>`:""}
+    </div>`;
+  }
+  if(g.bm && g.bm.length){
+    html+=`<div class="card"><p class="sec-title">🎯 BM 구성요소</p>
+      <div class="bm-grid">${g.bm.map(b=>`<div class="bm-item"><div class="n">${esc(b.name)}</div><div class="d">${esc(b.desc)}</div></div>`).join("")}</div></div>`;
+  }
+  if(g.notes && g.notes.length){
+    html+=`<div class="card"><p class="sec-title">📝 참고</p><ul class="notes">${g.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
+  }
+  html+=sourcesHtml(g.sources);
+  main.innerHTML=html;
+}
+
+function sourcesHtml(src){
+  if(!src||!src.length) return "";
+  return `<div class="card sources"><h4>출처</h4>${src.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">🔗 ${esc(s.title)}</a>`).join("")}</div>`;
+}
+
+function route(){
+  const h=decodeURIComponent(location.hash.replace(/^#/,""));
+  if(h) CUR=h;
+  else {
+    // default: first company overview, else first game
+    const co=DB.companies[0];
+    CUR = co.overview ? ("overview:"+co.id) : ("game:"+co.id+"/"+co.games[0].id);
+  }
+  renderSide(); renderMain();
+}
+
+async function boot(){
+  try{
+    const res=await fetch("data/bm.json",{cache:"no-store"});
+    DB=await res.json();
+    window.addEventListener("hashchange",route);
+    route();
+    document.getElementById("disc").innerHTML =
+      "※ 본 BM 정리는 공개 자료(기사·IR·게임 위키 등)를 바탕으로 한 내부 참고용 요약이며, 수치는 근사치일 수 있습니다. 각 항목의 '출처' 링크를 참고하세요.";
+  }catch(err){
+    document.getElementById("main").innerHTML=`<div class="card"><div class="loading">데이터를 불러오지 못했습니다.<br><small>${err}</small></div></div>`;
+    document.getElementById("side").innerHTML="";
+  }
+}
+boot();
+</script>
+</body>
+</html>
