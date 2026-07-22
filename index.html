@@ -33,6 +33,9 @@
   .stat b{display:block;font-size:20px;line-height:1.1}
   .stat span{font-size:11px;color:var(--muted)}
   .stat.red b{color:var(--u90)} .stat.orange b{color:var(--u60)} .stat.amber b{color:var(--u30)}
+  .stat.clickable{cursor:pointer;transition:background .12s,border-color .12s,box-shadow .12s}
+  .stat.clickable:hover{border-color:#c9d2ff;background:var(--accent-soft)}
+  .stat.active{outline:2px solid var(--accent);outline-offset:-1px;background:var(--accent-soft)}
 
   .layout{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
   @media (max-width:1000px){.layout{grid-template-columns:1fr}}
@@ -78,6 +81,8 @@
   .fu-head h2{font-size:15px;margin:0}
   .fu-head .hint{font-size:11px;color:var(--muted)}
   .fu-body{max-height:720px;overflow-y:auto}
+  .fu-filter{padding:9px 18px;font-size:12px;background:var(--accent-soft);border-bottom:1px solid var(--line);color:var(--ink)}
+  .fu-filter a{color:var(--accent);font-weight:600}
   .fu-group-label{position:sticky;top:0;background:var(--panel);padding:9px 18px 5px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--muted);border-bottom:1px solid var(--line);z-index:1}
   .fu-item{display:flex;align-items:center;gap:10px;padding:9px 18px;border-bottom:1px solid var(--line);cursor:pointer}
   .fu-item:hover{background:#fafbff}
@@ -212,9 +217,20 @@ function daysBetween(fromYmd, today){
 }
 
 let DATA=null, VIEW=null, TODAY=new Date();
+let BUCKETS=null, filterBucket=null;   // filterBucket: null=전체, else "d90"|"d60"|"d30"
 
 function statusClass(s){ return STATUS_CLASS[s]||"st-none"; }
 function bucket(days){ return days>=90?"d90":days>=60?"d60":days>=30?"d30":"dok"; }
+function partnerKey(p){ return p.companyId || ("t:"+p.name.toLowerCase()); }
+function eventKey(e){ return e.companyId || ("t:"+e.name.toLowerCase()); }
+function computeBuckets(){
+  const groups={d90:[],d60:[],d30:[],dok:[]}, byKey={};
+  for(const p of DATA.followups){
+    const days=daysBetween(p.lastMet,TODAY), b=bucket(days), k=partnerKey(p);
+    groups[b].push({...p,days,key:k}); byKey[k]=b;
+  }
+  BUCKETS={groups,byKey};
+}
 
 // --- render calendar --------------------------------------------------------
 function renderDOW(){
@@ -226,6 +242,7 @@ function eventsByDate(filter){
   const map={};
   for(const e of DATA.events){
     if(filter && !e.name.toLowerCase().includes(filter)) continue;
+    if(filterBucket && (!BUCKETS || BUCKETS.byKey[eventKey(e)]!==filterBucket)) continue;
     (map[e.date]=map[e.date]||[]).push(e);
   }
   return map;
@@ -259,16 +276,33 @@ function renderCalendar(){
 }
 
 // --- render follow-up -------------------------------------------------------
+function renderStats(){
+  const g=BUCKETS.groups;
+  const cards=[
+    {b:null,  cls:"", n:DATA.followups.length, l:"파트너"},
+    {b:"d90", cls:"red",    n:g.d90.length, l:"90일+ 긴급"},
+    {b:"d60", cls:"orange", n:g.d60.length, l:"60–89일"},
+    {b:"d30", cls:"amber",  n:g.d30.length, l:"30–59일"},
+  ];
+  document.getElementById("stats").innerHTML = cards.map(c=>{
+    const active=(filterBucket===c.b)?" active":"";
+    return `<div class="stat clickable ${c.cls}${active}" data-bucket="${c.b||''}" title="${c.b?'이 그룹 회사만 보기':'전체 보기'}">`
+         + `<b>${c.n}</b><span>${c.l}</span></div>`;
+  }).join("");
+  document.querySelectorAll("#stats .stat").forEach(el=>el.addEventListener("click",()=>{
+    const b=el.dataset.bucket||null;
+    filterBucket = (b===null) ? null : (filterBucket===b ? null : b); // 같은 카드 재클릭 시 해제
+    render();
+  }));
+}
+
 function renderFollowups(){
-  const groups={d90:[],d60:[],d30:[],dok:[]};
-  for(const p of DATA.followups){
-    const days=daysBetween(p.lastMet,TODAY);
-    groups[bucket(days)].push({...p,days});
-  }
   const labels={d90:"🔴 90일 이상 (긴급)",d60:"🟠 60–89일",d30:"🟡 30–59일",dok:"🟢 최근 (30일 이내)"};
+  const order = filterBucket ? [filterBucket] : ["d90","d60","d30","dok"];
   let html="";
-  for(const g of ["d90","d60","d30","dok"]){
-    const arr=groups[g]; if(!arr.length) continue;
+  if(filterBucket) html+=`<div class="fu-filter">필터: ${labels[filterBucket]} · <a href="#" id="clearFilter">전체 보기 ✕</a></div>`;
+  for(const g of order){
+    const arr=BUCKETS.groups[g]||[]; if(!arr.length) continue;
     html+=`<div class="fu-group-label">${labels[g]} · ${arr.length}</div>`;
     for(const p of arr){
       const link=p.companyId?` data-href="${NOTION(p.companyId)}"`:"";
@@ -281,16 +315,11 @@ function renderFollowups(){
     }
   }
   const fu=document.getElementById("fu");
-  fu.innerHTML=html||`<div class="loading">데이터 없음</div>`;
+  fu.innerHTML=html||`<div class="loading">해당 조건의 파트너가 없습니다</div>`;
   fu.querySelectorAll(".fu-item[data-href]").forEach(c=>
     c.addEventListener("click",()=>window.open(c.dataset.href,"_blank")));
-
-  // header stats
-  document.getElementById("stats").innerHTML =
-     `<div class="stat"><b>${DATA.followups.length}</b><span>파트너</span></div>`
-   + `<div class="stat red"><b>${groups.d90.length}</b><span>90일+ 긴급</span></div>`
-   + `<div class="stat orange"><b>${groups.d60.length}</b><span>60–89일</span></div>`
-   + `<div class="stat amber"><b>${groups.d30.length}</b><span>30–59일</span></div>`;
+  const cf=document.getElementById("clearFilter");
+  if(cf) cf.addEventListener("click",e=>{e.preventDefault();filterBucket=null;render();});
 }
 
 function renderLegend(){
@@ -301,6 +330,8 @@ function renderLegend(){
 }
 
 function render(){
+  computeBuckets();
+  renderStats();
   renderCalendar();
   renderFollowups();
   renderLegend();
