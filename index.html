@@ -102,7 +102,9 @@
   .legend i.lg.st-plan{background:var(--s-plan)}
   .legend i.lg.st-network{background:var(--s-network)}
   .legend i.lg.st-none{background:var(--s-none)}
-  .foot{margin-top:16px;color:var(--muted);font-size:12px;text-align:center}
+  .foot{margin-top:16px;color:var(--muted);font-size:12px;text-align:center;line-height:1.7}
+  .foot a{color:var(--accent);font-weight:600}
+  .foot .src{display:block;margin-top:2px}
   .loading{padding:60px;text-align:center;color:var(--muted)}
 </style>
 </head>
@@ -348,8 +350,11 @@ async function boot(){
     VIEW=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
     renderDOW();
     render();
-    document.getElementById("foot").textContent =
-      `총 ${DATA.events.length}건의 파트너 미팅 · ${DATA.followups.length}개 파트너 · 오늘 ${ymd(TODAY)} 기준`;
+    document.getElementById("foot").innerHTML =
+      `총 ${DATA.events.length}건의 파트너 미팅 · ${DATA.followups.length}개 파트너 · 오늘 ${ymd(TODAY)} 기준`
+      + `<span class="src">전체 데이터·출처: `
+      + `<a href="https://app.notion.com/p/181a9f00af8b8120a28cefb81246a1e5" target="_blank" rel="noopener">Notion 미팅노트 트래커</a>`
+      + ` · <a href="https://github.com/hazelryu/VNGKoreaOffice" target="_blank" rel="noopener">github.com/hazelryu/VNGKoreaOffice</a></span>`;
   }catch(err){
     document.getElementById("cal").innerHTML=
       `<div class="loading">데이터를 불러오지 못했습니다.<br><small>${err}</small></div>`;
