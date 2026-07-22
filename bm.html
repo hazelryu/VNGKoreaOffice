@@ -47,9 +47,17 @@
   .side .co-name .logo{width:16px;height:16px;border-radius:4px;background:var(--brand);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
   .co-games{padding-bottom:6px}
   .co-games[hidden]{display:none}
-  .letter{padding:9px 14px 5px;font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.1em;background:#fafbfc;border-bottom:1px solid var(--line)}
-  .side a.g .gn{flex:1;min-width:0}
-  .side a.g .plat{margin-right:5px;font-size:11px;letter-spacing:-1px}
+  .letter{display:inline-block;margin:12px 0 3px 12px;padding:2px 9px;background:var(--brand-soft);color:var(--brand);border-radius:6px;font-size:11px;font-weight:800;letter-spacing:.06em}
+  .side a.g{align-items:flex-start}
+  .side a.g .gn{flex:1;min-width:0;line-height:1.5}
+  .side a.g .plat{display:inline-flex;flex-wrap:wrap;gap:3px;margin-right:5px;vertical-align:middle}
+  .ptag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.02em;padding:1px 5px;border-radius:4px;color:#fff;line-height:1.5;white-space:nowrap}
+  .ptag.big{font-size:12px;padding:3px 10px;border-radius:6px}
+  .ptag.pc{background:#1c7ed6}
+  .ptag.mo{background:#2f9e44}
+  .ptag.con{background:#7048e8}
+  .ptag.bc{background:#e8590c}
+  .ptag.etc{background:#868e96}
   .side a.g{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 16px 8px 30px;font-size:13.5px;color:var(--ink);cursor:pointer;border-left:3px solid transparent}
   .side a.g:hover{background:var(--bg)}
   .side a.g.active{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand);font-weight:700}
@@ -65,9 +73,9 @@
   .ghead h2{font-size:24px;margin:0;letter-spacing:-.02em}
   .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--bg);color:var(--muted)}
   .oneliner{color:var(--ink);font-size:15px;margin:4px 0 0;opacity:.85}
-  .cover{position:relative;height:112px;border-radius:12px;margin-bottom:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .cover .cover-emoji{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:56px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.28))}
-  .cover img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+  .cover{position:relative;height:158px;border-radius:12px;margin-bottom:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .cover .cover-emoji{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.28))}
+  .cover img{position:relative;z-index:1;height:88%;width:auto;max-width:92%;object-fit:contain;filter:drop-shadow(0 3px 10px rgba(0,0,0,.25))}
   .pills{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
   .pill{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:20px;background:#eef1f6;color:#4b5266}
   .pill.ghost{background:transparent;border:1px solid var(--line);color:var(--muted);font-weight:600}
@@ -131,6 +139,7 @@
 let DB=null, CUR=null;        // CUR = "overview:ncsoft" | "game:ncsoft/lineagem"
 let expanded=new Set();       // company ids whose game list is open
 let sideFilter="";            // current search text
+let IMAGES={};                // "companyId/gameId" -> image URL (data/bm/_images.json)
 
 function esc(s){return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 
@@ -140,15 +149,18 @@ function currentCoId(){
   return CUR.replace("game:","").split("/")[0];
 }
 
-// platform → pill list (icon+label), parsed from the free-text platform field
+// platform → text tag list, parsed from the free-text platform field
 function platList(p){
   p=String(p||""); const out=[];
-  if(/pc|온라인|스팀|steam/i.test(p)) out.push({icon:"🖥️",label:"PC"});
-  if(/모바일|mobile|android|ios/i.test(p)) out.push({icon:"📱",label:"모바일"});
-  if(/콘솔|console|ps5|ps4|xbox|switch|플레이스테이션|플스/i.test(p)) out.push({icon:"🎮",label:"콘솔"});
-  if(/블록체인|blockchain/i.test(p)) out.push({icon:"⛓️",label:"블록체인"});
-  if(!out.length) out.push({icon:"🎮",label:"게임"});
+  if(/pc|온라인|스팀|steam/i.test(p)) out.push({label:"PC",cls:"pc"});
+  if(/모바일|mobile|android|ios/i.test(p)) out.push({label:"Mobile",cls:"mo"});
+  if(/콘솔|console|ps5|ps4|xbox|switch|플레이스테이션|플스/i.test(p)) out.push({label:"Console",cls:"con"});
+  if(/블록체인|blockchain/i.test(p)) out.push({label:"Blockchain",cls:"bc"});
+  if(!out.length) out.push({label:"기타",cls:"etc"});
   return out;
+}
+function platTags(p,big){
+  return platList(p).map(t=>`<span class="ptag ${t.cls}${big?' big':''}">${t.label}</span>`).join("");
 }
 
 // representative emoji per game — JSON "emoji" wins, else keyword-matched by franchise/genre
@@ -205,8 +217,7 @@ function renderSide(){
     if(co.overview) html+=`<a class="g overview ${CUR==='overview:'+co.id?'active':''}" data-key="overview:${co.id}">📌 회사 개요</a>`;
     for(const g of gamesToShow){
       const key="game:"+co.id+"/"+g.id;
-      const pi=platList(g.platform).map(p=>p.icon).join("");
-      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span class="gn"><span class="plat">${pi}</span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
+      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span class="gn"><span class="plat">${platTags(g.platform)}</span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
     }
     html+=`</div></div>`;
   }
@@ -244,11 +255,12 @@ function renderMain(){
   const found=findGame(parts[0],parts[1]);
   if(!found){ main.innerHTML=`<div class="card"><div class="loading">왼쪽에서 게임을 선택하세요.</div></div>`; return; }
   const g=found.g;
-  const pills=platList(g.platform).map(p=>`<span class="pill">${p.icon} ${esc(p.label)}</span>`).join("")
+  const pills=platTags(g.platform,true)
             + (g.year?`<span class="pill">📅 ${esc(g.year)}</span>`:"")
             + (g.platform?`<span class="pill ghost">${esc(g.platform)}</span>`:"");
+  const img=g.image || IMAGES[found.co.id+"/"+g.id] || "";
   const cover=`<div class="cover" style="${coverStyle(found.co.id)}">`
-            + (g.image?`<img src="${esc(g.image)}" alt="" onerror="this.remove()">`:"")
+            + (img?`<img src="${esc(img)}" alt="${esc(g.name)}" loading="lazy" onerror="this.remove()">`:"")
             + `<span class="cover-emoji">${gameEmoji(g)}</span></div>`;
   let html=`<div class="card">
       ${cover}
@@ -304,6 +316,7 @@ async function boot(){
       fetch("data/bm/"+id+".json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)));
     DB={companies:cos.filter(Boolean).sort((a,b)=>String(a.name).localeCompare(String(b.name),"en"))};
     if(!DB.companies.length) throw new Error("no company data loaded");
+    try{ IMAGES=await fetch("data/bm/_images.json",{cache:"no-store"}).then(r=>r.ok?r.json():{}); }catch(e){ IMAGES={}; }
     const search=document.getElementById("coSearch");
     search.addEventListener("input",e=>{ sideFilter=e.target.value; renderSide(); });
     window.addEventListener("hashchange",route);
