@@ -93,10 +93,18 @@
   .knum{background:#fff;border:1px solid #ffd9c7;border-radius:9px;padding:6px 12px;font-size:12.5px;font-weight:600;color:var(--warn)}
 
   .sec-title{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.04em;margin:0 0 12px}
+  .sec-note{font-weight:600;color:var(--muted);font-size:11px}
+  .bm-compose{margin-bottom:16px}
+  .bm-bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:9px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+  .bm-bar .seg{height:100%}
+  .bm-legend{display:flex;flex-wrap:wrap;gap:6px 14px}
+  .bm-cat{font-size:11.5px;color:#4b5266;display:inline-flex;align-items:center;gap:5px}
+  .bm-cat i{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .bm-cat b{color:var(--ink)}
   .bm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-  .bm-item{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:#fcfcfd}
-  .bm-item .n{font-size:14px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:6px}
-  .bm-item .n::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none}
+  .bm-item{border:1px solid var(--line);border-left:4px solid var(--s-none);border-radius:11px;padding:12px 15px;background:#fcfcfd}
+  .bm-item .bm-cat-tag{font-size:10px;font-weight:800;letter-spacing:.02em;margin-bottom:5px}
+  .bm-item .n{font-size:14px;font-weight:700;margin-bottom:4px}
   .bm-item .d{font-size:13px;color:#4b5266;line-height:1.5}
 
   .sources{margin-top:6px}
@@ -190,6 +198,36 @@ function gameEmoji(g){
   return "🎮";
 }
 
+// BM mechanic categories (for visual grouping)
+const BM_CATS={
+  gacha:{label:"확률형·가챠",color:"#e03131"},
+  growth:{label:"성장·강화",color:"#f76707"},
+  sub:{label:"구독·정기",color:"#1c7ed6"},
+  pass:{label:"배틀패스",color:"#0ca678"},
+  cosmetic:{label:"코스메틱",color:"#7048e8"},
+  conv:{label:"편의(P2C)",color:"#2f9e44"},
+  trade:{label:"거래·수수료",color:"#868e96"},
+  premium:{label:"프리미엄 판매",color:"#4263eb"},
+  chain:{label:"블록체인·P2E",color:"#a9611e"},
+  ad:{label:"광고",color:"#f0a500"},
+  etc:{label:"기타",color:"#adb5bd"}
+};
+function bmCategory(b){
+  const t=((b&&b.name||"")+" "+(b&&b.desc||"")).toLowerCase();
+  const h=re=>re.test(t);
+  if(h(/블록체인|토큰|nft|p2e|위믹스|드레이코|채굴|코인/)) return "chain";
+  if(h(/광고|리워드 광고/)) return "ad";
+  if(h(/뽑기|가챠|확률형|확률 |소환|루트박스|상자|크레이트|캡슐/)) return "gacha";
+  if(h(/배틀패스|배틀 패스|시즌 ?패스|로열 ?패스|시즌패스/)) return "pass";
+  if(h(/구독|월정액|정액제|정액 |\bvip|멤버십|정기 ?상품|정기권/)) return "sub";
+  if(h(/코스튬|스킨|외형|아바타|코스메틱|의상|염색|꾸미기|데코/)) return "cosmetic";
+  if(h(/패키지|dlc|프리미엄|b2p|본편|에디션|곡 팩|확장팩|플레이 판매|투 플레이/)) return "premium";
+  if(h(/편의|인벤토리|무게|펫|부스터|가속|페이컨비니언스|창고|자동/)) return "conv";
+  if(h(/강화|인챈트|성장|각성|승급|재련|스타포스|룬|성물|클래스|직업|변신|마법인형|축복|은총|버프|장비|무기|방어구/)) return "growth";
+  if(h(/거래소|수수료|로열티|중개/)) return "trade";
+  return "etc";
+}
+
 // deterministic gradient per company (no external assets)
 function coverStyle(id){
   let h=0; const s=String(id||"x"); for(let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))%360;
@@ -279,8 +317,19 @@ function renderMain(){
     </div>`;
   }
   if(g.bm && g.bm.length){
-    html+=`<div class="card"><p class="sec-title">🎯 BM 구성요소</p>
-      <div class="bm-grid">${g.bm.map(b=>`<div class="bm-item"><div class="n">${esc(b.name)}</div><div class="d">${esc(b.desc)}</div></div>`).join("")}</div></div>`;
+    const cats=g.bm.map(bmCategory);
+    const counts={}; cats.forEach(c=>counts[c]=(counts[c]||0)+1);
+    const order=Object.keys(BM_CATS).filter(k=>counts[k]);
+    const total=g.bm.length;
+    const bar=order.map(k=>`<span class="seg" style="width:${(counts[k]/total*100).toFixed(2)}%;background:${BM_CATS[k].color}" title="${BM_CATS[k].label} ${counts[k]}"></span>`).join("");
+    const legend=order.map(k=>`<span class="bm-cat"><i style="background:${BM_CATS[k].color}"></i>${BM_CATS[k].label} <b>${counts[k]}</b></span>`).join("");
+    const cards=g.bm.map((b,i)=>{const m=BM_CATS[cats[i]];
+      return `<div class="bm-item" style="border-left-color:${m.color}">`
+           + `<div class="bm-cat-tag" style="color:${m.color}">${m.label}</div>`
+           + `<div class="n">${esc(b.name)}</div><div class="d">${esc(b.desc)}</div></div>`;}).join("");
+    html+=`<div class="card"><p class="sec-title">🎯 BM 구성요소 <span class="sec-note">· 유형별 색상 분류</span></p>
+      <div class="bm-compose"><div class="bm-bar">${bar}</div><div class="bm-legend">${legend}</div></div>
+      <div class="bm-grid">${cards}</div></div>`;
   }
   if(g.notes && g.notes.length){
     html+=`<div class="card"><p class="sec-title">📝 참고</p><ul class="notes">${g.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
