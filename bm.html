@@ -47,6 +47,9 @@
   .side .co-name .logo{width:16px;height:16px;border-radius:4px;background:var(--brand);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
   .co-games{padding-bottom:6px}
   .co-games[hidden]{display:none}
+  .letter{padding:9px 14px 5px;font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.1em;background:#fafbfc;border-bottom:1px solid var(--line)}
+  .side a.g .gn{flex:1;min-width:0}
+  .side a.g .plat{margin-right:5px;font-size:11px;letter-spacing:-1px}
   .side a.g{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 16px 8px 30px;font-size:13.5px;color:var(--ink);cursor:pointer;border-left:3px solid transparent}
   .side a.g:hover{background:var(--bg)}
   .side a.g.active{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand);font-weight:700}
@@ -62,6 +65,12 @@
   .ghead h2{font-size:24px;margin:0;letter-spacing:-.02em}
   .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--bg);color:var(--muted)}
   .oneliner{color:var(--ink);font-size:15px;margin:4px 0 0;opacity:.85}
+  .cover{position:relative;height:112px;border-radius:12px;margin-bottom:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .cover .cover-emoji{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:56px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.28))}
+  .cover img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+  .pills{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
+  .pill{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:20px;background:#eef1f6;color:#4b5266}
+  .pill.ghost{background:transparent;border:1px solid var(--line);color:var(--muted);font-weight:600}
 
   .outcome{background:linear-gradient(180deg,#fff8f4,#fff);border:1px solid #ffd9c7;border-radius:14px;padding:18px 22px;margin-bottom:16px}
   .outcome h3{margin:0 0 10px;font-size:15px;color:var(--brand);display:flex;align-items:center;gap:7px}
@@ -131,20 +140,64 @@ function currentCoId(){
   return CUR.replace("game:","").split("/")[0];
 }
 
+// platform → pill list (icon+label), parsed from the free-text platform field
+function platList(p){
+  p=String(p||""); const out=[];
+  if(/pc|온라인|스팀|steam/i.test(p)) out.push({icon:"🖥️",label:"PC"});
+  if(/모바일|mobile|android|ios/i.test(p)) out.push({icon:"📱",label:"모바일"});
+  if(/콘솔|console|ps5|ps4|xbox|switch|플레이스테이션|플스/i.test(p)) out.push({icon:"🎮",label:"콘솔"});
+  if(/블록체인|blockchain/i.test(p)) out.push({icon:"⛓️",label:"블록체인"});
+  if(!out.length) out.push({icon:"🎮",label:"게임"});
+  return out;
+}
+
+// representative emoji per game — JSON "emoji" wins, else keyword-matched by franchise/genre
+function gameEmoji(g){
+  if(g && g.emoji) return g.emoji;
+  const n=((g&&g.name||"")+" "+(g&&g.oneLiner||"")).toLowerCase();
+  const rules=[
+    [/리니지|lineage/,"⚔️"],[/니케|nikke/,"🔫"],[/쿠키런|cookie/,"🍪"],
+    [/배틀그라운드|pubg|배그/,"🔫"],[/스텔라|stellar/,"🗡️"],[/검은사막|black desert|붉은사막|crimson/,"🐎"],
+    [/메이플|maple/,"🍄"],[/던전앤파이터|던파|dnf|dungeon/,"👊"],[/피파|fc ?온라인|fc online|축구/,"⚽"],
+    [/야구|baseball|프로야구|mlb/,"⚾"],[/골프|golf/,"⛳"],[/홈런/,"⚾"],
+    [/뮤 |mu online|mu origin|무 온라인|r2/,"🗡️"],[/블루 ?아카이브|blue archive/,"🎓"],
+    [/서머너즈|summoners/,"🔮"],[/마블|marvel/,"🦸"],[/세븐나이츠|seven knights/,"🛡️"],
+    [/솔로|solo leveling|나 혼자만/,"🗡️"],[/eve|이브 온라인/,"🚀"],[/p의 거짓|lies of p/,"🎭"],
+    [/고양이|cat/,"🐱"],[/djmax|리듬/,"🎵"],[/데이브|dave|다이버|diver/,"🤿"],
+    [/오딘|odin/,"⚡"],[/우마무스메|우마|uma/,"🏇"],[/가디언|guardian/,"🛡️"],
+    [/에버소울|eversoul|데스티니 ?차일드|destiny child|브라운더스트|browndust|에픽세븐|epic seven|아우터플레인|outerplane/,"✨"],
+    [/크로스파이어|crossfire/,"🔫"],[/로스트아크|lost ark/,"🪓"],
+    [/미르|mir|나이트 ?크로우|night crow|이미르|ymir/,"🐉"],[/위믹스|wemix|블록체인/,"⛓️"],
+    [/아이온|aion/,"🕊️"],[/블레이드|blade/,"⚔️"],[/칼리스토|callisto/,"👾"],[/인조이|inzoi/,"🏠"],
+    [/한게임|웹보드|포커|고스톱|맞고/,"🃏"],[/크루세이더|crusader/,"⚔️"],[/프렌즈팝|friends/,"🧩"],
+    [/오버독스|overdox|헌터|hunter/,"🗡️"],[/플레이투게더|play together/,"🏝️"],
+    [/아키에이지|archeage/,"🌊"],[/디센던트|descendant/,"👽"],[/신화|god|여신/,"🔮"]
+  ];
+  for(const [re,e] of rules){ if(re.test(n)) return e; }
+  return "🎮";
+}
+
+// deterministic gradient per company (no external assets)
+function coverStyle(id){
+  let h=0; const s=String(id||"x"); for(let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))%360;
+  return `background:linear-gradient(135deg,hsl(${h},64%,56%),hsl(${(h+38)%360},70%,44%))`;
+}
+
 function renderSide(){
   const f=sideFilter.trim().toLowerCase();
-  let html="", shown=0;
+  let html="", shown=0, lastLetter="";
   for(const co of DB.companies){
     const games=co.games||[];
     const nameMatch = !f || co.name.toLowerCase().includes(f);
     const gMatches = f ? games.filter(g=>String(g.name).toLowerCase().includes(f)) : games;
     if(f && !nameMatch && gMatches.length===0) continue;
     shown++;
+    const letter=(String(co.name)[0]||"#").toUpperCase();
+    if(letter!==lastLetter){ html+=`<div class="letter">${esc(letter)}</div>`; lastLetter=letter; }
     const gamesToShow = (f && !nameMatch) ? gMatches : games;      // matched by game → show only matches
     const isOpen = expanded.has(co.id) || (f && (nameMatch || gMatches.length>0));
     html+=`<div class="co">`;
     html+=`<div class="co-name ${isOpen?'open':''}" data-co="${co.id}">`
-        + `<span class="logo">${esc(co.name.slice(0,2))}</span>`
         + `<span class="co-label">${esc(co.name)}</span>`
         + `<span class="cnt">${games.length}</span>`
         + `<span class="caret">${isOpen?'▾':'▸'}</span></div>`;
@@ -152,7 +205,8 @@ function renderSide(){
     if(co.overview) html+=`<a class="g overview ${CUR==='overview:'+co.id?'active':''}" data-key="overview:${co.id}">📌 회사 개요</a>`;
     for(const g of gamesToShow){
       const key="game:"+co.id+"/"+g.id;
-      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
+      const pi=platList(g.platform).map(p=>p.icon).join("");
+      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span class="gn"><span class="plat">${pi}</span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
     }
     html+=`</div></div>`;
   }
@@ -190,9 +244,16 @@ function renderMain(){
   const found=findGame(parts[0],parts[1]);
   if(!found){ main.innerHTML=`<div class="card"><div class="loading">왼쪽에서 게임을 선택하세요.</div></div>`; return; }
   const g=found.g;
-  const badges=[g.year,g.platform].filter(Boolean).map(b=>`<span class="badge">${esc(b)}</span>`).join(" ");
+  const pills=platList(g.platform).map(p=>`<span class="pill">${p.icon} ${esc(p.label)}</span>`).join("")
+            + (g.year?`<span class="pill">📅 ${esc(g.year)}</span>`:"")
+            + (g.platform?`<span class="pill ghost">${esc(g.platform)}</span>`:"");
+  const cover=`<div class="cover" style="${coverStyle(found.co.id)}">`
+            + (g.image?`<img src="${esc(g.image)}" alt="" onerror="this.remove()">`:"")
+            + `<span class="cover-emoji">${gameEmoji(g)}</span></div>`;
   let html=`<div class="card">
-      <div class="ghead"><h2>${esc(g.name)}</h2>${badges}</div>
+      ${cover}
+      <div class="ghead"><h2>${esc(g.name)}</h2></div>
+      <div class="pills">${pills}</div>
       ${g.oneLiner?`<p class="oneliner">${esc(g.oneLiner)}</p>`:""}
     </div>`;
 
