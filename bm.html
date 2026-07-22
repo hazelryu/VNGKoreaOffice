@@ -33,10 +33,20 @@
 
   /* sidebar */
   .side{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;position:sticky;top:20px}
-  .side h1{font-size:14px;margin:0;padding:15px 16px;border-bottom:1px solid var(--line);letter-spacing:-.01em}
-  .side .co{padding:6px 0}
-  .side .co-name{display:flex;align-items:center;gap:7px;padding:9px 16px 5px;font-size:12px;font-weight:800;color:var(--brand);letter-spacing:.02em}
-  .side .co-name .logo{width:16px;height:16px;border-radius:4px;background:var(--brand);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .side-head{padding:14px 14px 12px;border-bottom:1px solid var(--line)}
+  .side-head h1{font-size:14px;margin:0 0 10px;letter-spacing:-.01em}
+  .side-search{width:100%;border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:13px;outline:none;background:#fff}
+  .side-search:focus{border-color:var(--brand)}
+  .co-list{max-height:calc(100vh - 150px);overflow-y:auto}
+  .side .co{border-bottom:1px solid var(--line)}
+  .side .co-name{display:flex;align-items:center;gap:7px;padding:11px 14px;font-size:12.5px;font-weight:800;color:var(--brand);letter-spacing:.02em;cursor:pointer;user-select:none}
+  .side .co-name:hover{background:var(--brand-soft)}
+  .side .co-name .co-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .side .co-name .caret{color:var(--muted);font-size:10px}
+  .side .co-name .cnt{color:var(--muted);font-size:10.5px;font-weight:600}
+  .side .co-name .logo{width:16px;height:16px;border-radius:4px;background:var(--brand);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+  .co-games{padding-bottom:6px}
+  .co-games[hidden]{display:none}
   .side a.g{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 16px 8px 30px;font-size:13.5px;color:var(--ink);cursor:pointer;border-left:3px solid transparent}
   .side a.g:hover{background:var(--bg)}
   .side a.g.active{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand);font-weight:700}
@@ -57,6 +67,10 @@
   .outcome h3{margin:0 0 10px;font-size:15px;color:var(--brand);display:flex;align-items:center;gap:7px}
   .outcome ul{margin:0;padding-left:20px}
   .outcome li{margin:5px 0;font-size:14px}
+  .fin{background:linear-gradient(180deg,#f2f8ff,#fff);border:1px solid #cfe1ff;border-radius:14px;padding:18px 22px;margin-bottom:16px}
+  .fin h3{margin:0 0 10px;font-size:15px;color:var(--accent);display:flex;align-items:center;gap:7px}
+  .fin ul{margin:0;padding-left:20px}
+  .fin li{margin:5px 0;font-size:14px}
   .knums{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
   .knum{background:#fff;border:1px solid #ffd9c7;border-radius:9px;padding:6px 12px;font-size:12.5px;font-weight:600;color:var(--warn)}
 
@@ -93,31 +107,64 @@
 </header>
 
 <div class="shell">
-  <aside class="side" id="side"><div class="loading">불러오는 중…</div></aside>
+  <aside class="side" id="side">
+    <div class="side-head">
+      <h1>🎮 게임사 BM</h1>
+      <input id="coSearch" class="side-search" placeholder="회사·게임 검색…" autocomplete="off">
+    </div>
+    <div class="co-list" id="coList"><div class="loading">불러오는 중…</div></div>
+  </aside>
   <main class="main" id="main"><div class="card"><div class="loading">불러오는 중…</div></div></main>
 </div>
 <div class="disc" id="disc"></div>
 
 <script>
-let DB=null, CUR=null;   // CUR = "overview:ncsoft" | "game:ncsoft/lineagem"
+let DB=null, CUR=null;        // CUR = "overview:ncsoft" | "game:ncsoft/lineagem"
+let expanded=new Set();       // company ids whose game list is open
+let sideFilter="";            // current search text
 
 function esc(s){return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 
+function currentCoId(){
+  if(!CUR) return null;
+  if(CUR.startsWith("overview:")) return CUR.slice(9);
+  return CUR.replace("game:","").split("/")[0];
+}
+
 function renderSide(){
-  let html=`<h1>🎮 게임사 BM 정리</h1>`;
+  const f=sideFilter.trim().toLowerCase();
+  let html="", shown=0;
   for(const co of DB.companies){
-    html+=`<div class="co"><div class="co-name"><span class="logo">${esc(co.name.slice(0,2))}</span>${esc(co.name)}</div>`;
+    const games=co.games||[];
+    const nameMatch = !f || co.name.toLowerCase().includes(f);
+    const gMatches = f ? games.filter(g=>String(g.name).toLowerCase().includes(f)) : games;
+    if(f && !nameMatch && gMatches.length===0) continue;
+    shown++;
+    const gamesToShow = (f && !nameMatch) ? gMatches : games;      // matched by game → show only matches
+    const isOpen = expanded.has(co.id) || (f && (nameMatch || gMatches.length>0));
+    html+=`<div class="co">`;
+    html+=`<div class="co-name ${isOpen?'open':''}" data-co="${co.id}">`
+        + `<span class="logo">${esc(co.name.slice(0,2))}</span>`
+        + `<span class="co-label">${esc(co.name)}</span>`
+        + `<span class="cnt">${games.length}</span>`
+        + `<span class="caret">${isOpen?'▾':'▸'}</span></div>`;
+    html+=`<div class="co-games" ${isOpen?'':'hidden'}>`;
     if(co.overview) html+=`<a class="g overview ${CUR==='overview:'+co.id?'active':''}" data-key="overview:${co.id}">📌 회사 개요</a>`;
-    for(const g of (co.games||[])){
+    for(const g of gamesToShow){
       const key="game:"+co.id+"/"+g.id;
       html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
     }
-    html+=`</div>`;
+    html+=`</div></div>`;
   }
-  html+=`<div class="soon">더 많은 게임사 준비 중…</div>`;
-  const side=document.getElementById("side");
-  side.innerHTML=html;
-  side.querySelectorAll("a.g").forEach(a=>a.addEventListener("click",()=>{location.hash=a.dataset.key;}));
+  if(!shown) html+=`<div class="soon">검색 결과가 없습니다.</div>`;
+  const list=document.getElementById("coList");
+  list.innerHTML=html;
+  list.querySelectorAll(".co-name").forEach(el=>el.addEventListener("click",()=>{
+    const id=el.dataset.co;
+    if(expanded.has(id)) expanded.delete(id); else expanded.add(id);
+    renderSide();
+  }));
+  list.querySelectorAll("a.g").forEach(a=>a.addEventListener("click",e=>{e.stopPropagation();location.hash=a.dataset.key;}));
 }
 
 function findGame(coId,gId){
@@ -133,6 +180,7 @@ function renderMain(){
       main.innerHTML=`<div class="card">
         <div class="ghead"><h2>${esc(co.name)} · 회사 개요</h2></div>
         <p class="oneliner">${esc(co.overview.tagline||"")}</p></div>
+        ${finHtml(co.overview.financials)}
         <div class="card"><p class="sec-title">BM 전략 흐름</p><ul class="notes">${(co.overview.summary||[]).map(s=>`<li>${esc(s)}</li>`).join("")}</ul></div>
         ${sourcesHtml(co.overview.sources)}`;
       return;
@@ -165,6 +213,11 @@ function renderMain(){
   main.innerHTML=html;
 }
 
+function finHtml(fin){
+  if(!fin||!fin.length) return "";
+  return `<div class="fin"><h3>💰 최근 실적</h3><ul>${fin.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
+}
+
 function sourcesHtml(src){
   if(!src||!src.length) return "";
   return `<div class="card sources"><h4>출처</h4>${src.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">🔗 ${esc(s.title)}</a>`).join("")}</div>`;
@@ -178,6 +231,7 @@ function route(){
     const co=DB.companies[0];
     CUR = co.overview ? ("overview:"+co.id) : ("game:"+co.id+"/"+co.games[0].id);
   }
+  const cid=currentCoId(); if(cid) expanded.add(cid);   // keep active company open
   renderSide(); renderMain();
 }
 
@@ -189,6 +243,8 @@ async function boot(){
       fetch("data/bm/"+id+".json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)));
     DB={companies:cos.filter(Boolean).sort((a,b)=>String(a.name).localeCompare(String(b.name),"en"))};
     if(!DB.companies.length) throw new Error("no company data loaded");
+    const search=document.getElementById("coSearch");
+    search.addEventListener("input",e=>{ sideFilter=e.target.value; renderSide(); });
     window.addEventListener("hashchange",route);
     route();
     document.getElementById("disc").innerHTML =
