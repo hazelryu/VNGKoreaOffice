@@ -1,0 +1,2368 @@
+[
+    {
+        "id":  "3a3a9f00af8b803fadc5cd30cd7fc022",
+        "name":  null,
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "160a9f00af8b80cea540d4a3571d5cc5",
+        "name":  "111 PERCENT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "273a9f00af8b80ac8048cc8d22f99c34",
+        "name":  "5DIMS INC",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "aa6675de0736417da606c8401d044cbd",
+        "name":  "5MINLAB",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  "마포구"
+    },
+    {
+        "id":  "160a9f00af8b807bb12be7138396f14b",
+        "name":  "A BUTTON",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "144a9f00af8b801bb762ec0bce66829b",
+        "name":  "A-STAR GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "161a9f00af8b8044b3c8ecb6a61bef0b",
+        "name":  "ABLE GAMES",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "4d080a72a94b40ba8bc1c84da19e0432",
+        "name":  "ACT FIVE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "6b901b12444848f2a3b48dca7cfebb52",
+        "name":  "ACT GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b804db3abebff76fdc94e",
+        "name":  "ACTIONFIT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "19fa9f00af8b80ccad9de1a78bf44e02",
+        "name":  "AFTER TIME",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "창원시"
+    },
+    {
+        "id":  "2a3a9f00af8b80e6ae8eff9a9f2319fe",
+        "name":  "AGENIX",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "방콕"
+    },
+    {
+        "id":  "eb81c53a25964081a0fac9222be337cb",
+        "name":  "AIMED (ECLIPSE)",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "149a9f00af8b80428d86c6b30b41ee7d",
+        "name":  "AIMING",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "1eba9f00af8b80919205e628c6e3da9b",
+        "name":  "AIRCAP",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "마포구"
+    },
+    {
+        "id":  "233a9f00af8b80ccbc15ebf83e18495d",
+        "name":  "AK INTERACTIVE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "89963b9e813d4bc493f2f2f6908b03f4",
+        "name":  "AKATSUKI GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시나가와구"
+    },
+    {
+        "id":  "2a3a9f00af8b80228ebdf2bfdd70f3a0",
+        "name":  "ALBUS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b80ba9715d7a9e7ac6b7f",
+        "name":  "ALOHA FACTORY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "14ba9f00af8b809c8106de5f89ead312",
+        "name":  "ALT9",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "3a0a9f00af8b80a6abdfefff2a95e143",
+        "name":  "ANIPLEX",
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "e300ae2383e54166886c7e048e90759c",
+        "name":  "APPLE KR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2b3a9f00af8b808c9460e59e36c92a6f",
+        "name":  "APPLIBOT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "177a9f00af8b80afa5bdf77c6de609f8",
+        "name":  "AQUA TREE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "e34f3458b9f048d0bd508a082fd8e033",
+        "name":  "ARC SYSTEM WORKS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "종로구"
+    },
+    {
+        "id":  "12aa9f00af8b8021be94d2be51e59e4a",
+        "name":  "ATINUM",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "145a9f00af8b805d92b9c6534425d2bf",
+        "name":  "BAGELCODE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "c54517ba54324f7c875647bf05aaad39",
+        "name":  "BANDAI NAMCO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "ec175cc5b8a74aeab0c3f0b8f5d60f26",
+        "name":  "BANK OF INNOVATION",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "272a9f00af8b80d189b6ecc8f5305db8",
+        "name":  "BEPEX",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "동대문구"
+    },
+    {
+        "id":  "2a3a9f00af8b806ea46cc7806e31a7ff",
+        "name":  "BIG BOLD",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "160a9f00af8b8039a258d5a0cf92b308",
+        "name":  "BIGFIRE GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "367a9f00af8b801d83f7fd9ab23617cc",
+        "name":  "BILLIONARE GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1eba9f00af8b80b78860c659f39f9769",
+        "name":  "BIRDLETTER",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b80a5b3cef823caba2937",
+        "name":  "BITMANGO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "8f22c11980b647129158fbdeb5689b79",
+        "name":  "BLACKSTORM",
+        "status":  "프로젝트 진행중",
+        "priority":  null,
+        "region":  "안양시"
+    },
+    {
+        "id":  "149a9f00af8b80f2b600d44cf4d76ae2",
+        "name":  "BLAST EDGE GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "83b1f35cfe8143e39d8bdc27dcbeea2c",
+        "name":  "BLUE POTION",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b80e385f1f31237eb24b4",
+        "name":  "BLUEHOLE STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "38ea9f00af8b80e7aa09d627caaa4278",
+        "name":  "BOMNALSOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "안양시"
+    },
+    {
+        "id":  "2a3a9f00af8b806fb100cc1d51023070",
+        "name":  "BOMSOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "대전시"
+    },
+    {
+        "id":  "02f141349016453288139edba2b40c96",
+        "name":  "BUSHIROAD",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "나카노구"
+    },
+    {
+        "id":  "2a3a9f00af8b80188eb2d849b9edc5d3",
+        "name":  "BUSIDOL",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "대구시"
+    },
+    {
+        "id":  "177a9f00af8b809a8188cd8db0a79965",
+        "name":  "BUTTONS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "1c2a9f00af8b80009a29df2e2e2c1279",
+        "name":  "BY4M",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "273a9f00af8b80259451f258978a1a93",
+        "name":  "BYKING",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "32d239e74bee4ceb8c8b1bec1af88c59",
+        "name":  "CAPCOM",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "11fa9f00af8b80a5a669e17da430dc4d",
+        "name":  "CARTA",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "19fa9f00af8b80b282f0cd8958c915dc",
+        "name":  "CCR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "64d4d4ffa5974f7092fb2b65354b26e4",
+        "name":  "CHALLENGERS GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "폐업"
+    },
+    {
+        "id":  "160a9f00af8b80f9964ffe6937f2c235",
+        "name":  "CHRONO STUDIO",
+        "status":  "1 계획 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "1c7a9f00af8b80438e70e93a821068d9",
+        "name":  "CLE GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "강남구"
+    },
+    {
+        "id":  "fbe3eb96ad4c48399d45ca2917ba4bb3",
+        "name":  "CLOVER GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "a4855b1852f7458ba028bf5a09ba89fd",
+        "name":  "CODECAT",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강서구"
+    },
+    {
+        "id":  "5e75e3cc23c7454f9e025bf27ecebe70",
+        "name":  "COM2US",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "97bcf86526834c6da68bf896415ab45d",
+        "name":  "CONTROL9",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "26ac5fffb5a74f59accd4bcb76de8ec1",
+        "name":  "COOKAPPS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "273a9f00af8b806f8174daf4e8bc2edb",
+        "name":  "COYOTE RUNNER",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "233a9f00af8b80d58d45dd4e92d07d79",
+        "name":  "CREVERSE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "d9875d444bd7453e8fea4773fd1e5a4a",
+        "name":  "CYBER AGENT",
+        "status":  "2 접촉 중",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "328150f9cac2485f842e980cbbf9cb50",
+        "name":  "CYGAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "3c709fbca3144310b0bccfb8b85e9230",
+        "name":  "D-ZARD",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "273a9f00af8b80c6bf57c4ac90ea44d0",
+        "name":  "D.H INC",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "코네모도"
+    },
+    {
+        "id":  "a0c225b723a64c6db6e8aa9ea8c50c49",
+        "name":  "DAERISOFT",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "177a9f00af8b80d08598d19c7cc2168a",
+        "name":  "DALCOM SOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "67c92e1c58dc40debd72e005bed45de7",
+        "name":  "DELUXE GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "시부야구"
+    },
+    {
+        "id":  "9b4897a937b54f09b5bcbe2b29e762be",
+        "name":  "DENA",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "669237a0d60146d6b84fdfcbd3a5f9f4",
+        "name":  "DEVCAT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "d42bfe5edda44937a7370eafd57ce220",
+        "name":  "DEVSISTERS",
+        "status":  "프로젝트 진행중",
+        "priority":  "높음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "177a9f00af8b80949af2e7c9f54db7cb",
+        "name":  "DEXAR STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "b76cb0b0f5c94b1fb71b5c598dd14c7b",
+        "name":  "DIGITAL HEARTS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "273a9f00af8b8019b737df5f0fe3bc8c",
+        "name":  "DIMPS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "오사카"
+    },
+    {
+        "id":  "36ea9f00af8b814d8b13d37e171de8c3",
+        "name":  "DMM",
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "160a9f00af8b80c89bcccb3f1f068c15",
+        "name":  "DOUBLE DOWN GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "8da63fbad8ff4628bdf495b99d6a6fff",
+        "name":  "DRAGON FLY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "233a9f00af8b80be9586cdee166f2933",
+        "name":  "DREAMPLAY GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "fbbd3dfb0cc149b492192e54281ba084",
+        "name":  "DRECOM",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시나가와구"
+    },
+    {
+        "id":  "160a9f00af8b804ca5e3cff34c91e631",
+        "name":  "DYNAMIS ONE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "181a9f00af8b80a493a1c179f8b48389",
+        "name":  "EK GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "69c4ecb0d40c467bbfc73c5d1c0cc566",
+        "name":  "ELECTRONICS EXTREME KR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "c37a41588e094f95bb54dba6a1f03c21",
+        "name":  "ELEMENTAL CRAFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "36da9f00af8b81e28c4debc2b7c07c8b",
+        "name":  "ELITE GAMES",
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "1eca9f00af8b806aa860f0fed1f51edd",
+        "name":  "END9 GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "천안시"
+    },
+    {
+        "id":  "177a9f00af8b803e8cc1df3afb3616fe",
+        "name":  "EPID GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "b5681bccb81443a7990336be2f6f58f7",
+        "name":  "ESTGAMES",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "서초구"
+    },
+    {
+        "id":  "160a9f00af8b80d1b975c2b488b763f3",
+        "name":  "EVR STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "181a9f00af8b8091bd39ea66df58faf6",
+        "name":  "FANTOME",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "160a9f00af8b80c78473c7a9043f5d0f",
+        "name":  "FIRSTPARK GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b8070b131cd0553daceee",
+        "name":  "FLASK",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "ba0fb0bb74e94464b49bf299f9a4a70b",
+        "name":  "FLINT GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "1d2a9f00af8b801f881be4476e892810",
+        "name":  "FLUFFY DUCK",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b8092bf4dd9bef6cae94e",
+        "name":  "FLUFFY GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "성동구"
+    },
+    {
+        "id":  "36a4427beb5f4fdea58bbaedc2c38c6b",
+        "name":  "FOW GAMES",
+        "status":  "2 접촉 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "22fda805d6d14f9cb7cc4b5b9f5a4383",
+        "name":  "FOWARDWORKS (SONY MUSIC)",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "2a3a9f00af8b804ba1bbf0574d476839",
+        "name":  "FUKUROU LABO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "083f25abbb2b48f8bf54eb4d42da7033",
+        "name":  "FUNCREW",
+        "status":  "2 접촉 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b80faaea1cc7a288f1774",
+        "name":  "FUNKY VINE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "199a9f00af8b804b8baefa2e9a7f918d",
+        "name":  "GALA INC",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "144a9f00af8b8067935dd5b2575a1ce4",
+        "name":  "GAME DUO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "adafed2686624a3abd1447326668846b",
+        "name":  "GAME TALES",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "1eba9f00af8b80b9bd97e71ed39a27d5",
+        "name":  "GAMECRIT STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "d9ce3b9592034d1c8a50c25d8b0111f0",
+        "name":  "GAMELIGHT",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "독일"
+    },
+    {
+        "id":  "160a9f00af8b8079b124f412e8281724",
+        "name":  "GAMFSN",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "5383a6a7e6f244f6b4b485495847f65e",
+        "name":  "GARENA KR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "0e95e3117eee47fabd6465f9319a779f",
+        "name":  "GCREST",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "160a9f00af8b808ab780f08afc9b2377",
+        "name":  "GEAR2",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "f806ebf72f834165b658962281d5f231",
+        "name":  "GENTLE MANIAC",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "144a9f00af8b80a39186ca95e9dd83e1",
+        "name":  "GIANTY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "호치민D7"
+    },
+    {
+        "id":  "cff90061b6714440bfb7a5d7586ae369",
+        "name":  "GLOHOW",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "e0056134fc794165b89dc8bc3b6f7015",
+        "name":  "GNI SOFT",
+        "status":  "프로젝트 진행중",
+        "priority":  "높음",
+        "region":  "구로구"
+    },
+    {
+        "id":  "15ba9f00af8b805fb2beda87656c4bcc",
+        "name":  "GONG GAMES",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "145a9f00af8b80989038c6d2fa240f46",
+        "name":  "GPUN",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "60fc2ce1838a4fcb8110238c6dc63a7c",
+        "name":  "GRAMS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "8c2cfc0cc14d46be8c32df195ca2f09e",
+        "name":  "GRAVITY",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "마포구"
+    },
+    {
+        "id":  "177a9f00af8b803f88d0f0c0739705f5",
+        "name":  "GRAVITY NEOCYON",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "177a9f00af8b80509f54eada1f813097",
+        "name":  "GRAY GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "76a62ac15d7f4838accaab618e0263cc",
+        "name":  "GREE ENTERTAINMENT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "177a9f00af8b80e498bef0d091276117",
+        "name":  "GREMORY GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "23ea9f00af8b80869a56e60426f10272",
+        "name":  "GUMI INC",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "9c0d7780541b4c31b95f9229051d8981",
+        "name":  "HAEGIN",
+        "status":  "프로젝트 진행중",
+        "priority":  "높음",
+        "region":  "구로구"
+    },
+    {
+        "id":  "8267bdb8bdbb42b0b1c3aa6c3cec1282",
+        "name":  "HANBIT SOFT",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "금천구"
+    },
+    {
+        "id":  "1c2a9f00af8b80e4b449e8711f9d2370",
+        "name":  "HAPPYTUK",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "177a9f00af8b80559907c5c8ba5f20d1",
+        "name":  "HB INNOVISION",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "영등포구"
+    },
+    {
+        "id":  "161a9f00af8b80d2b8a7fba3e37fd50f",
+        "name":  "HIGHBROW",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b8002bb4ff62744bd7577",
+        "name":  "HIGHSCORE GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "9d37e6931ce1467d947a4e5e152700f2",
+        "name":  "HIKE",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "d9d291653c6345819a6c93155f92d154",
+        "name":  "HOUND13",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "087fef9998264444bace49cb2c01df5c",
+        "name":  "HYBE IM",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b80c089bcfdfd21806c87",
+        "name":  "HYPERCENT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "6732a251bb8d45e280534d549d21b5fd",
+        "name":  "HYPERGRYPH",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "상하이"
+    },
+    {
+        "id":  "314a9f00af8b805e8982e5efe106b34b",
+        "name":  "IAN GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "1a5a9f00af8b80be8dd2e63fc1202deb",
+        "name":  "IKINA GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "1d6a9f00af8b8037b667da2fdf61d12a",
+        "name":  "IMC GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "106a9f00af8b80d5b298f3d2fe0fe47f",
+        "name":  "INFOVINE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "여의도구"
+    },
+    {
+        "id":  "36da9f00af8b815ba466f158073ca8fe",
+        "name":  "INNOVA",
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "177a9f00af8b8022a2e9db60606ca26c",
+        "name":  "ITOXI",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "88111e1dfe0b44dba4f821460f03ac91",
+        "name":  "JOYCITY",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "db0523678ae84197b7f5211af5293ada",
+        "name":  "KAKAO GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "분당구"
+    },
+    {
+        "id":  "160a9f00af8b80489fc3cd3a335f230b",
+        "name":  "KATKIT",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "705cee0383144ca78f118e2404e7b0eb",
+        "name":  "KLAB",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "2e8a9f00af8b808e84dae690bfb967bc",
+        "name":  "KLASH GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "성동구"
+    },
+    {
+        "id":  "f93a16c73a1b4af9907a0b235b9d4898",
+        "name":  "KOEI TECMO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "카나가와구"
+    },
+    {
+        "id":  "70f6a3c121514c1a8212998096e15731",
+        "name":  "KOG",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "대구"
+    },
+    {
+        "id":  "dd69c880037f4f1992f2605880829958",
+        "name":  "KOMOE GAME",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "싱가폴"
+    },
+    {
+        "id":  "11fa9f00af8b809aada3d759423816dd",
+        "name":  "KONAMI",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "추오구"
+    },
+    {
+        "id":  "160a9f00af8b80cc91a4de39a57b0696",
+        "name":  "KONG STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "99dd8b02255b4cfb9a63b1ddb406b423",
+        "name":  "KRAFTON",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "177a9f00af8b809fa0bef46b44634143",
+        "name":  "L&K LOGIC KOREA",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "177a9f00af8b80e1b174f35e400b2645",
+        "name":  "LEPOR GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "송파구"
+    },
+    {
+        "id":  "d7556e095fd04e63803f8df233766228",
+        "name":  "LEVEL5",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "후쿠오카"
+    },
+    {
+        "id":  "1a5a9f00af8b80ddb8ebf72e5cd919fc",
+        "name":  "LIFULSE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "233a9f00af8b80e8bf5bd0a4c60fed3d",
+        "name":  "LIGHTNING GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "제주도"
+    },
+    {
+        "id":  "198a9f00af8b80398979d64ec92c53e8",
+        "name":  "LIKEIT GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "b425c34012fd45bf9056721e2b14c348",
+        "name":  "LINE GAMES",
+        "status":  "프로젝트 진행중",
+        "priority":  "중간",
+        "region":  "강남구"
+    },
+    {
+        "id":  "170a9f00af8b802db69ee276ff1d4d7b",
+        "name":  "LION GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b808f8386c32fedea7a81",
+        "name":  "LIONHEART STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "370a9f00af8b8190b0b1cee22b7cfb6f",
+        "name":  "LITRAIL",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "84b1d4fcd13249bebe4a0c25b9c40939",
+        "name":  "LOAD COMPLETE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "160a9f00af8b809a8624f62fc4309fe4",
+        "name":  "LUDIUS GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "e567afe10cde4ca5875d0131af759bab",
+        "name":  "LUMIDUS",
+        "status":  "보류",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "161a9f00af8b8009b3fafbc39708bd75",
+        "name":  "MACOVILL",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "160a9f00af8b8036a576ed5ec322c7f7",
+        "name":  "MAD ENGINE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1a4a9f00af8b80bf8c63c8c98c389c08",
+        "name":  "MAFGAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "9aa77a90be894bc8bfae4ec15ec5d253",
+        "name":  "MAJOR9",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "1eba9f00af8b802685e4fd1a32be3351",
+        "name":  "MALANG GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "15fa9f00af8b80caa94acb8fa0f3b048",
+        "name":  "MANJUU GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "상하이"
+    },
+    {
+        "id":  "816504576a104e0794882705af1aa678",
+        "name":  "MASANG SOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "부산"
+    },
+    {
+        "id":  "177a9f00af8b80669a6fdf86ccb185d3",
+        "name":  "ME2ON",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "177a9f00af8b80219a3ed3d8f715e1cb",
+        "name":  "MEERKAT GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "3751501459d346cd852ad18885fb2099",
+        "name":  "MEGAZONE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "b2cb7edaaa6241cfa0d5fecaa7af5dd6",
+        "name":  "MGAME",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "금천구"
+    },
+    {
+        "id":  "e5a2060141cf426aaf62fcc111b51123",
+        "name":  "MIHOYO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "관악구"
+    },
+    {
+        "id":  "19fa9f00af8b80c3bfa7f61cf098dad9",
+        "name":  "MINIMUM STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "대전"
+    },
+    {
+        "id":  "732b5fa86bb344a9bc92f1852fc78340",
+        "name":  "MINT ROCKET",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b80a8ad8adfd7b58284c9",
+        "name":  "MISTIL GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "인천"
+    },
+    {
+        "id":  "2a3a9f00af8b80438104c1c824638b83",
+        "name":  "MNM SOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "21ea9f00af8b80bcafa6d7d57104552c",
+        "name":  "MOAI GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "ea9aa3b1413643c2941b98466a1ccb4f",
+        "name":  "MOBIRIX",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "144a9f00af8b801fb35acff37fa39b65",
+        "name":  "MODLE STUDIOS",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "fd2de2ba4a544fc9a3d7429c5e67c56d",
+        "name":  "MOJITO GAMES",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b803b9dc3f8680af28c72",
+        "name":  "MONSTER STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "영등포구"
+    },
+    {
+        "id":  "161a9f00af8b802382c9edb9040ffff2",
+        "name":  "MOVE INTERACTIVE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "144a9f00af8b80cab827ccb6601e0c13",
+        "name":  "MOVISOFT",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "2a3a9f00af8b80ce9ecde5ea53fb5339",
+        "name":  "N.E STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "177a9f00af8b807c9131d37fee4be39f",
+        "name":  "NADDIC GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b80c7b7a1d6a1ad7d6408",
+        "name":  "NANALI",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "8c38d7cc0c0040dc89ed915ce93765f0",
+        "name":  "NAVER CLOUD",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "80d8fd915f8641898603d3dffe9d6791",
+        "name":  "NC",
+        "status":  "프로젝트 진행중",
+        "priority":  "높음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "1c2a9f00af8b80e0aba9f0bbfadb7cfd",
+        "name":  "NC TAIWAN",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "35fa9f00af8b80d68b44cd6713c7742a",
+        "name":  "NDREAM",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "144a9f00af8b800a9a00f5dab308e229",
+        "name":  "NEEDS GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b800fa830ce91949bc31c",
+        "name":  "NEOPLE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "제주"
+    },
+    {
+        "id":  "5a64a9e849ca4742a6a9982bef7f0809",
+        "name":  "NEOWIZ",
+        "status":  "2 접촉 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "181a9f00af8b8088b88af71ee4bcb3a0",
+        "name":  "NEPTUNE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "17aa9f00af8b80ab9761dd5923e5b10a",
+        "name":  "NERDY STAR",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "4fca80ef50b24f2f9108f7b00f0d23bb",
+        "name":  "NETEASE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "be360b3391354a5c88a47ef05c71230e",
+        "name":  "NETMARBLE",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  "구로구"
+    },
+    {
+        "id":  "1a0a9f00af8b800a86d7e23e46c90674",
+        "name":  "NETMARBLE F&C",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "d6dcae16c1244c5ea5b236302afc47da",
+        "name":  "NETMARBLE MONSTER",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "160a9f00af8b80c9b362f823a90cfd35",
+        "name":  "NETMARBLE NEO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "2a3a9f00af8b80b6a3dcda7bf1e68142",
+        "name":  "NETSTREAM",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "149a9f00af8b80f5b051d139b6930ef1",
+        "name":  "NEURON AGE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "오사카"
+    },
+    {
+        "id":  "959c2a0f69384f4c8aa4943164bd241a",
+        "name":  "NEXON",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b80bfabc3e270d4eeabe1",
+        "name":  "NEXT STAGE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "부산"
+    },
+    {
+        "id":  "144a9f00af8b80a896dce115a29cf2a4",
+        "name":  "NEXTLV",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "4353fd0e24bd46dda513793ea5e99813",
+        "name":  "NEXUS (ACTION SQUARE)",
+        "status":  "2 접촉 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "0495127b76094135bef7d43d97cbfa5f",
+        "name":  "NGELGAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "대구"
+    },
+    {
+        "id":  "177a9f00af8b80c8a58ef6cfab8c1bd6",
+        "name":  "NHN",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "160a9f00af8b80a4af00e6817ec22677",
+        "name":  "NINEARK",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "용인시"
+    },
+    {
+        "id":  "36da9f00af8b818b9f02dd8c626e46ce",
+        "name":  "NIRVANA",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1a9a3457c4d64fbcb6d14a8a46e7ab0c",
+        "name":  "NPIXEL",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "233a9f00af8b8014bb20f5c8b462d2f5",
+        "name":  "NSPEC",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강서구"
+    },
+    {
+        "id":  "319a9f00af8b8017950ff1f10e02faab",
+        "name":  "NSTAGE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "d0674c50141c4c22814050896657eb7f",
+        "name":  "NTRANCE",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "강남구"
+    },
+    {
+        "id":  "144a9f00af8b809daa4ddc8c5b5a8dd1",
+        "name":  "NTRIPPLE",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "구로구"
+    },
+    {
+        "id":  "19fa9f00af8b8027b28bd9d9178cbd51",
+        "name":  "NU SOFT",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "e046436609db48b9ac0636d3f16a71d1",
+        "name":  "NUVERSE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "0c5fca83163047f5b045399ae76518dc",
+        "name":  "NX3",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b80efa1a4ec037bcc842f",
+        "name":  "NYOU",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "144a9f00af8b800c8d52c315d73397f8",
+        "name":  "O2GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "대구"
+    },
+    {
+        "id":  "19fa9f00af8b80d2b5dfcec3a03cdb98",
+        "name":  "OCTOPO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "성동구"
+    },
+    {
+        "id":  "9504427c60dd430e92a9a6dbed8125c7",
+        "name":  "ONE STORE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b8053ab82edde53451553",
+        "name":  "ONEWAY TICKET STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "2277568cdb574fad8f1697f285c04df1",
+        "name":  "OVENGAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "29f40b8b74b24252bc0170f25af1850a",
+        "name":  "PALE BLUE",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "120a9f00af8b80fba980d8d92b87e7c9",
+        "name":  "PANANA STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "e385dae67195423f89b66af3e6eb50ab",
+        "name":  "PARK ESM",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "부산"
+    },
+    {
+        "id":  "78efdbbe84194ce2945a4de292c398d0",
+        "name":  "PEARL ABYSS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "과천시"
+    },
+    {
+        "id":  "4b807d615d3e4ba487b79b08d130ba0e",
+        "name":  "PERFECT WORLD KR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "160a9f00af8b80daaa8aedb8dcd45b77",
+        "name":  "PIXEL TRIBE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1eba9f00af8b80bc8baaff257ad4eab6",
+        "name":  "PLAYDAY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "대전"
+    },
+    {
+        "id":  "145a9f00af8b804f8641df301086673f",
+        "name":  "PLAYHARD",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "214a9f00af8b80b1bab5c9cdc1ad1248",
+        "name":  "PLAYNICS",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "광진구"
+    },
+    {
+        "id":  "36ea9f00af8b81bb9202f491361badb9",
+        "name":  "PLAYPARK",
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "177a9f00af8b8031b31dfaf556d8252d",
+        "name":  "PLAYUS SOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "479d06745ae24698ac457241a41d2631",
+        "name":  "PLAYWITH",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "서초구"
+    },
+    {
+        "id":  "0bce55cbe46a444695fe75ea46ab9b90",
+        "name":  "PLAYWORKS",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b80459cb7f51adeed6a61",
+        "name":  "PLOTRICK",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "2e0a868411a04dfca5246595343c4b60",
+        "name":  "POKELABO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "36da9f00af8b818bbaa5d2aa46a7ee11",
+        "name":  "POKEMON COMPANY",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  null
+    },
+    {
+        "id":  "12aa9f00af8b80eb91c8ffd27fabefba",
+        "name":  "POPPIN GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "37b5a61f9db642f3867bfbcf17b7d682",
+        "name":  "PRESS A",
+        "status":  "프로젝트 진행중",
+        "priority":  "높음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "161a9f00af8b802995a4eadf15d23302",
+        "name":  "PROJECT CLOUD GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "267a9f00af8b80e3bc6bd663dd966a43",
+        "name":  "PROJECT MOON",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "영통구"
+    },
+    {
+        "id":  "177a9f00af8b8087a99ee0f4fb73cfcc",
+        "name":  "PUZZLE 1 STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "2a3a9f00af8b8012a174e593dcfb67cc",
+        "name":  "QGAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "송파구"
+    },
+    {
+        "id":  "29cd4c28834945b0a5eb380fecf2ddb5",
+        "name":  "QUALI ARTS",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "273a9f00af8b80b5994ad2a164d969de",
+        "name":  "RACJIN",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "오사카"
+    },
+    {
+        "id":  "2e3a9f00af8b8053961fc3394fa853e6",
+        "name":  "RAIWON SOFT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "106a9f00af8b809e9f59fa65ecfd47b8",
+        "name":  "REAZON (RUDEL)",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "35fa9f00af8b8011962dd864a4dba46b",
+        "name":  "RED GINKGO GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "송파구"
+    },
+    {
+        "id":  "858c8899594f405091892d1ca926d7a4",
+        "name":  "REDLAB GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a0a9f00af8b807e8cecc700a5924a75",
+        "name":  "RETRO CAT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "11fa9f00af8b8062b2adcbfb7fb9ccb4",
+        "name":  "RHAON ENTERTAINMENT",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "대구"
+    },
+    {
+        "id":  "160a9f00af8b80d5bfafeca459f07805",
+        "name":  "RING GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "서초구"
+    },
+    {
+        "id":  "160a9f00af8b804cbd99c3806aa3e216",
+        "name":  "RISING WINGS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "e1550d0d6bf34ab7b70902368cf893f5",
+        "name":  "ROBLOX",
+        "status":  "프로젝트 진행중",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "1cfa9f00af8b80858d50ea15ed533ae4",
+        "name":  "ROUTE9",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "2a3a9f00af8b80b58919f19562640d16",
+        "name":  "SANDY FLOOR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "177a9f00af8b806bb295c66299435263",
+        "name":  "SECOND DIVE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "869cb0b226b74eac942935f06c4e45b5",
+        "name":  "SEGA",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시나가와구"
+    },
+    {
+        "id":  "4dfaf6469fcd4b40899ccaaf1c58c271",
+        "name":  "SESISOFT",
+        "status":  "프로젝트 진행중",
+        "priority":  "높음",
+        "region":  "서초구"
+    },
+    {
+        "id":  "4879c791fdc3454898c1f228d79682fe",
+        "name":  "SHIFT UP",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "383a9f00af8b80fa8cbad8ba2c68b0bd",
+        "name":  "Shiftup",
+        "status":  null,
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "35d0819ceb664e329765665cd3c28b56",
+        "name":  "SHUEISHA GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "21ea9f00af8b800e91e0d20b5e52e164",
+        "name":  "SMART NOW",
+        "status":  "프로젝트 진행중",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "025a44c34eed49ea8b12b6c6521d2a51",
+        "name":  "SMARTSTUDY GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "d2cd3b1355f448898d6b8fe8f7175dbe",
+        "name":  "SMILEGATE ENTERTAINMENT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "3bba39a3a3cd42db986f4422bf6969de",
+        "name":  "SMILEGATE HOLDINGS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "eaeb0d9022694e339daa5c0edb5c0c01",
+        "name":  "SMILEGATE RPG",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "분당구"
+    },
+    {
+        "id":  "7bf3b58ed6db447c8df881fdb82ca9d0",
+        "name":  "SNOWPIPE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "273a9f00af8b8060af97ea424b08566d",
+        "name":  "SO WHAT INC",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "미나토구"
+    },
+    {
+        "id":  "a66ee2b63e344862a75f9f7163a9b86c",
+        "name":  "SOFTNYX",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "0bdad49c83ac4d71acd356c27b9bfd7c",
+        "name":  "SOFTON ENTERTAINMENT",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "36ea9f00af8b811bb070f972ded3be3f",
+        "name":  "SONNORI",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "19fa9f00af8b809e8103f501474362e9",
+        "name":  "SOUL GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "160a9f00af8b80d3abedc7b7590b0e15",
+        "name":  "SOUTHPAW GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "서초구"
+    },
+    {
+        "id":  "177a9f00af8b80329c80f56cd61d0ebc",
+        "name":  "SPRING COMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "2564840a577d40efa8d4894fbaeae36f",
+        "name":  "SQUARE ENIX",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "1eba9f00af8b8091a538cb109492e9fb",
+        "name":  "STANDEGG",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "2a3a9f00af8b80f39752f376dcfb2b16",
+        "name":  "STARLIKE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "전북"
+    },
+    {
+        "id":  "106a9f00af8b80b094d1e12648ef0dc9",
+        "name":  "STORY TACO",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "서초구"
+    },
+    {
+        "id":  "233a9f00af8b80fc8adfc793d3221b3b",
+        "name":  "STUDIO 215",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "충주시"
+    },
+    {
+        "id":  "273a9f00af8b80ccb016c5ef9e2b9f83",
+        "name":  "STUDIO51",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "120a9f00af8b80569230d24388c15784",
+        "name":  "STUDIOBSIDE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "273a9f00af8b80b39d2df78e0bf7c7f9",
+        "name":  "SUCCESS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시나가와구"
+    },
+    {
+        "id":  "9ba182573d2246b9af45bef49d993653",
+        "name":  "SUMZAP",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "시부야구"
+    },
+    {
+        "id":  "bbefcfbd3aef4c01bdce398daf2b4c57",
+        "name":  "SUNBORN NETWORK TECHNOLOGY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "177a9f00af8b80429ac6c911a6fe0dc7",
+        "name":  "SUNCYAN",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "bf6ad6cce21244e7a3ae4a3119799458",
+        "name":  "SUPER AWESOME",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "4df734bb4170497fa198bfa784cdaf0f",
+        "name":  "SUPER CREATIVE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1a5a9f00af8b80819ce1e65d06456c17",
+        "name":  "SUPER RABBIT GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "2a1a9f00af8b8018b48de9a101bb39cf",
+        "name":  "SUPERBOX",
+        "status":  "2 접촉 중",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "160a9f00af8b80158342c024e59bcf59",
+        "name":  "SUPERCENT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "송파구"
+    },
+    {
+        "id":  "1eea9f00af8b80219d6bd6dfa59e6468",
+        "name":  "SUPERJOY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "144a9f00af8b80db9c70c98f1c6ae577",
+        "name":  "SUPERVILLAIN LABS",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "서초구"
+    },
+    {
+        "id":  "177a9f00af8b804f8066e7a356222894",
+        "name":  "SUPERVOID",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "8d54510c6cef42048b4a54fa88039191",
+        "name":  "T3ENTERTAINMENT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "160a9f00af8b80119ec9d54945b0a3c4",
+        "name":  "TEAM 42",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "마포구"
+    },
+    {
+        "id":  "2a3a9f00af8b800b9e2dda064ddf5e8a",
+        "name":  "TEENY STUDIO",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "733ef6932c654959a4324f4077eae7a2",
+        "name":  "TENCENT KR",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "197a9f00af8b80d4bf5af422a1a58248",
+        "name":  "THE ARKLABS",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "2a3a9f00af8b80b780aacd81ce02e69a",
+        "name":  "THE HORIZON",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "전라남도"
+    },
+    {
+        "id":  "1eba9f00af8b800d9c13e6c51a985d41",
+        "name":  "TINYFUN GAMES",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "36da9f00af8b81e0a1bce8045ecac27e",
+        "name":  "TMC",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "신주쿠구"
+    },
+    {
+        "id":  "36ea9f00af8b81249c2ffea28a8ce663",
+        "name":  "TOSS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b80e3a76ee433581f23d3",
+        "name":  "TREENOD",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "145a9f00af8b8028840ee54ffe5d2903",
+        "name":  "TREEPLLA",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "a461aca46b7549c9999a6503e37c19c1",
+        "name":  "TRIPEARL GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "수정구"
+    },
+    {
+        "id":  "1eba9f00af8b80fb8708f3c9fa2a0849",
+        "name":  "TS GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "영등포구"
+    },
+    {
+        "id":  "177a9f00af8b80b9be1fd8209d5c18b1",
+        "name":  "TWOHANDS GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "fb5a42ae08984b228bacf8be9348ee49",
+        "name":  "U,LU GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1eba9f00af8b806a9007f77a96aede5d",
+        "name":  "UBIS",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "1c3a9f00af8b80eda2b9d13201992cbb",
+        "name":  "UNIANA",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "양천구"
+    },
+    {
+        "id":  "388a9f00af8b80a384d2cce78d0814ef",
+        "name":  "Upstage",
+        "status":  "프로젝트 진행중",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "2a3a9f00af8b8042aecadaa32a862f1a",
+        "name":  "UTOPLANET CORP",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "ce13e1473b824607a55fc978a120095e",
+        "name":  "V FIVE GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "5714bbbb635140e2b80080df8a40dac7",
+        "name":  "VA GAMES",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "59b6bc5446e246d5a2a07f5ae9da03de",
+        "name":  "VALOFE",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "금천구"
+    },
+    {
+        "id":  "d4d2b4bdeba9415ba1ddc4d0ac0da8f8",
+        "name":  "VERTIGO GAMES",
+        "status":  "보류",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "181a9f00af8b80dea646efefff8fe84d",
+        "name":  "VESPA",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "b62d392c108847a7b1dc0af4f004258e",
+        "name":  "VIC GAME STUDIO",
+        "status":  "1 계획 중",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "160a9f00af8b80b7989dfefa6647e94b",
+        "name":  "VOYAGER GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "273a9f00af8b801a9ae8dfc254bb4fba",
+        "name":  "WAYCODER",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "전라남도/금천구"
+    },
+    {
+        "id":  "36ea9f00af8b8101a4fbc5ec620245c5",
+        "name":  "WEBPAL",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  null
+    },
+    {
+        "id":  "751b3684c11d4830abf4d6e49949382c",
+        "name":  "WEBZEN",
+        "status":  "2 접촉 중",
+        "priority":  "높음",
+        "region":  "분당구"
+    },
+    {
+        "id":  "cefe0e40227e416da2aac85f220ce390",
+        "name":  "WEMADE",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "198a9f00af8b8019a6b9e5f712180945",
+        "name":  "WEMADE CONNECT",
+        "status":  "2 접촉 중",
+        "priority":  "중간",
+        "region":  "분당구"
+    },
+    {
+        "id":  "160a9f00af8b8069b603d5ab116f3199",
+        "name":  "WEMADE MAX",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "177a9f00af8b8088a348eaf000914119",
+        "name":  "WEMADE NEXT",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "28319fe23c7b4a859dd280380b985fc8",
+        "name":  "WEMADE PLAY",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "ad7c759661ea421a83b9af230844b4f4",
+        "name":  "WFS (Wright Flyer Studios)",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "1eba9f00af8b8013ba5eed8a843721cd",
+        "name":  "WINTERDOG GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "구로구"
+    },
+    {
+        "id":  "56a73c84dbbe46d7bbd6dd5097bca2cc",
+        "name":  "WIREGAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "송파구"
+    },
+    {
+        "id":  "21ea9f00af8b80d58a9bf142d20788e8",
+        "name":  "WONCOMZ",
+        "status":  "2 접촉 중",
+        "priority":  "낮음",
+        "region":  "강남구"
+    },
+    {
+        "id":  "175a9f00af8b809eaacae3659e7b7c46",
+        "name":  "WONDER SQUAD",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    },
+    {
+        "id":  "3c8de171dd414fc8aaa8c6b545b2d6d3",
+        "name":  "XL GAMES",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "분당구"
+    },
+    {
+        "id":  "e084a4f0e5e14141aa4aee5a08093d6e",
+        "name":  "Z5",
+        "status":  "네트워킹",
+        "priority":  null,
+        "region":  "강남구"
+    }
+]

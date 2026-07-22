@@ -82,6 +82,7 @@
   .chip:hover{filter:brightness(.97);box-shadow:0 0 0 1px var(--line) inset}
   .chip.arch{opacity:.6}
   .chip.nolink{cursor:default}
+  .chip.up{border-left:3px solid #4263eb;background:#edf0ff;color:#3646c9;font-weight:600}
   /* contact-status accent */
   .st-project{border-color:var(--s-project);background:#ebfbee}
   .st-talk{border-color:var(--s-talk);background:#e7f5ff}
@@ -133,6 +134,7 @@
     </a>
     <nav class="nav-links">
       <a href="index.html" class="active">📅 미팅 캘린더</a>
+      <a href="pipeline.html">🤝 파트너 파이프라인</a>
       <a href="bm.html">🎮 게임사 BM</a>
     </nav>
   </div>
@@ -247,7 +249,8 @@ function daysBetween(fromYmd, today){
 }
 
 let DATA=null, VIEW=null, TODAY=new Date();
-let BUCKETS=null, filterBucket=null;   // filterBucket: null=전체, else "d90"|"d60"|"d30"
+let BUCKETS=null, filterBucket=null;
+let UPCOMING=[];   // upcoming meetings from Google/Outlook (data/upcoming.json)   // filterBucket: null=전체, else "d90"|"d60"|"d30"
 
 function statusClass(s){ return STATUS_CLASS[s]||"st-none"; }
 function bucket(days){ return days>=90?"d90":days>=60?"d60":days>=30?"d30":"dok"; }
@@ -283,6 +286,7 @@ function renderCalendar(){
   const first=new Date(y,m,1), start=first.getDay(), dim=new Date(y,m+1,0).getDate();
   const filter=document.getElementById("search").value.trim().toLowerCase();
   const map=eventsByDate(filter);
+  const upMap={}; for(const u of UPCOMING){ if(u&&u.date) (upMap[u.date]=upMap[u.date]||[]).push(u); }
   const todayStr=ymd(TODAY);
   let html="";
   for(let i=0;i<start;i++) html+=`<div class="cell blank"></div>`;
@@ -296,8 +300,13 @@ function renderCalendar(){
       const t=e.contact?` · ${e.contact}`:"";
       return `<span class="chip ${cls}"${href} title="${e.name}${t}">${e.name}</span>`;
     }).join("");
+    const ups=upMap[ds]||[];
+    const upChips=ups.map(u=>{
+      const tt=((u.title||"")+(u.desc?" · "+u.desc:"")).replace(/"/g,"");
+      return `<span class="chip up"${u.link?` data-href="${u.link}"`:""} title="${tt}">📌 ${u.title||""}</span>`;
+    }).join("");
     html+=`<div class="cell ${dow===0||dow===6?'wknd':''} ${ds===todayStr?'is-today':''}">`
-        + `<div class="dnum">${d}</div>${chips}</div>`;
+        + `<div class="dnum">${d}</div>${upChips}${chips}</div>`;
   }
   const cal=document.getElementById("cal");
   cal.innerHTML=html;
@@ -356,7 +365,8 @@ function renderLegend(){
   const items=[["st-project","프로젝트 진행중"],["st-talk","논의 중"],["st-contact","접촉 중"],
                ["st-plan","계획 중"],["st-network","네트워킹"],["st-none","미분류"]];
   document.getElementById("legend").innerHTML =
-    items.map(([c,l])=>`<span><i class="lg ${c}"></i>${l}</span>`).join("");
+    items.map(([c,l])=>`<span><i class="lg ${c}"></i>${l}</span>`).join("")
+    + `<span><i class="lg" style="background:#4263eb"></i>📌 예정 미팅(구글 캘린더)</span>`;
 }
 
 function render(){
@@ -375,6 +385,7 @@ async function boot(){
     ]);
     const meetings=await mRes.json(), companies=await cRes.json();
     DATA=transform(meetings,companies);
+    try{ const u=await fetch("data/upcoming.json",{cache:"no-store"}).then(r=>r.ok?r.json():null); UPCOMING=(u&&u.events)||[]; }catch(e){ UPCOMING=[]; }
     VIEW=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
     renderDOW();
     render();
