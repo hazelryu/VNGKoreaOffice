@@ -48,9 +48,6 @@
   .co-games{padding-bottom:6px}
   .co-games[hidden]{display:none}
   .letter{display:inline-block;margin:12px 0 3px 12px;padding:2px 9px;background:var(--brand-soft);color:var(--brand);border-radius:6px;font-size:11px;font-weight:800;letter-spacing:.06em}
-  .side a.g{align-items:flex-start}
-  .side a.g .gn{flex:1;min-width:0;line-height:1.5}
-  .side a.g .plat{display:inline-flex;flex-wrap:wrap;gap:3px;margin-right:5px;vertical-align:middle}
   .ptag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.02em;padding:1px 5px;border-radius:4px;color:#fff;line-height:1.5;white-space:nowrap}
   .ptag.big{font-size:12px;padding:3px 10px;border-radius:6px}
   .ptag.pc{background:#1c7ed6}
@@ -58,12 +55,15 @@
   .ptag.con{background:#7048e8}
   .ptag.bc{background:#e8590c}
   .ptag.etc{background:#868e96}
-  .side a.g{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 16px 8px 30px;font-size:13.5px;color:var(--ink);cursor:pointer;border-left:3px solid transparent}
+  .side a.g{display:block;padding:8px 14px 9px 22px;font-size:13px;color:var(--ink);cursor:pointer;border-left:3px solid transparent}
   .side a.g:hover{background:var(--bg)}
   .side a.g.active{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand);font-weight:700}
-  .side a.g .yr{font-size:10.5px;color:var(--muted)}
+  .side a.g .g-top{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:3px}
+  .side a.g .plat{display:flex;flex-wrap:wrap;gap:3px;min-width:0}
+  .side a.g .yr{font-size:10.5px;color:var(--muted);flex:none}
   .side a.g.active .yr{color:var(--brand)}
-  .side a.overview{padding-left:16px;font-weight:600}
+  .side a.g .gname{display:block;line-height:1.35;word-break:keep-all;overflow-wrap:anywhere}
+  .side a.overview{padding:9px 14px 9px 22px;font-weight:600}
   .side .soon{padding:8px 16px;font-size:12px;color:var(--muted)}
 
   /* main */
@@ -217,7 +217,9 @@ function renderSide(){
     if(co.overview) html+=`<a class="g overview ${CUR==='overview:'+co.id?'active':''}" data-key="overview:${co.id}">📌 회사 개요</a>`;
     for(const g of gamesToShow){
       const key="game:"+co.id+"/"+g.id;
-      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}"><span class="gn"><span class="plat">${platTags(g.platform)}</span>${esc(g.name)}</span><span class="yr">${esc(g.year||"")}</span></a>`;
+      html+=`<a class="g ${CUR===key?'active':''}" data-key="${key}">`
+          + `<span class="g-top"><span class="plat">${platTags(g.platform)}</span><span class="yr">${esc(g.year||"")}</span></span>`
+          + `<span class="gname">${esc(g.name)}</span></a>`;
     }
     html+=`</div></div>`;
   }
