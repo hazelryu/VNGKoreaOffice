@@ -94,10 +94,16 @@
 
   .sec-title{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.04em;margin:0 0 12px}
   .sec-note{font-weight:600;color:var(--muted);font-size:11px}
-  .bm-compose{margin-bottom:16px}
-  .bm-bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:9px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
-  .bm-bar .seg{height:100%}
+  .bm-flow{display:flex;align-items:stretch;gap:4px;overflow-x:auto;padding-bottom:8px;margin-bottom:14px}
+  .bm-stage{flex:1 1 0;min-width:158px;background:#fafbfd;border:1px solid var(--line);border-radius:12px;padding:11px 11px 13px}
+  .bm-stage h4{margin:0 0 9px;font-size:12px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:5px;white-space:nowrap}
+  .bm-arrow{display:flex;align-items:center;color:#c7ccd6;font-size:20px;font-weight:700;flex:none;padding:0 2px}
+  .bm-node{display:block;font-size:12px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);border-left:4px solid var(--c,#adb5bd);border-radius:8px;padding:6px 9px;margin:6px 0;line-height:1.35;word-break:keep-all}
+  .bm-node .nc{display:block;font-size:9px;font-weight:800;letter-spacing:.02em;margin-bottom:2px}
+  .bm-node.ph{border-left-color:#dfe3ea;color:var(--muted);font-weight:600;background:#f6f7f9}
+  @media (max-width:720px){.bm-flow{flex-direction:column}.bm-arrow{transform:rotate(90deg);align-self:center}}
   .bm-legend{display:flex;flex-wrap:wrap;gap:6px 14px}
+  .bm-legend-sp{margin-bottom:14px;padding-top:2px}
   .bm-cat{font-size:11.5px;color:#4b5266;display:inline-flex;align-items:center;gap:5px}
   .bm-cat i{width:10px;height:10px;border-radius:3px;display:inline-block}
   .bm-cat b{color:var(--ink)}
@@ -213,12 +219,21 @@ const BM_CATS={
   ad:{label:"광고",color:"#f0a500"},
   etc:{label:"기타",color:"#adb5bd"}
 };
+// monetization flow stages (유입 → 몰입 → 과금 → 리텐션)
+const BM_STAGES=[
+  {key:"entry",  title:"유입·진입",     icon:"🚪"},
+  {key:"engine", title:"몰입·경쟁 유발", icon:"⚙️"},
+  {key:"convert",title:"과금 전환",      icon:"💳"},
+  {key:"retain", title:"반복·리텐션",    icon:"🔁"}
+];
+const CAT_STAGE={ premium:"entry", growth:"engine", trade:"engine", gacha:"convert", cosmetic:"convert", chain:"convert", conv:"convert", sub:"retain", pass:"retain", ad:"retain", etc:"engine" };
+
 function bmCategory(b){
   const t=((b&&b.name||"")+" "+(b&&b.desc||"")).toLowerCase();
   const h=re=>re.test(t);
   if(h(/블록체인|토큰|nft|p2e|위믹스|드레이코|채굴|코인/)) return "chain";
   if(h(/광고|리워드 광고/)) return "ad";
-  if(h(/뽑기|가챠|확률형|확률 |소환|루트박스|상자|크레이트|캡슐/)) return "gacha";
+  if(h(/뽑기|가챠|확률형|확률 |소환|루트박스|상자|크레이트|캡슐|천장|픽업|콜라보/)) return "gacha";
   if(h(/배틀패스|배틀 패스|시즌 ?패스|로열 ?패스|시즌패스/)) return "pass";
   if(h(/구독|월정액|정액제|정액 |\bvip|멤버십|정기 ?상품|정기권/)) return "sub";
   if(h(/코스튬|스킨|외형|아바타|코스메틱|의상|염색|꾸미기|데코/)) return "cosmetic";
@@ -321,15 +336,24 @@ function renderMain(){
     const cats=g.bm.map(bmCategory);
     const counts={}; cats.forEach(c=>counts[c]=(counts[c]||0)+1);
     const order=Object.keys(BM_CATS).filter(k=>counts[k]);
-    const total=g.bm.length;
-    const bar=order.map(k=>`<span class="seg" style="width:${(counts[k]/total*100).toFixed(2)}%;background:${BM_CATS[k].color}" title="${BM_CATS[k].label} ${counts[k]}"></span>`).join("");
     const legend=order.map(k=>`<span class="bm-cat"><i style="background:${BM_CATS[k].color}"></i>${BM_CATS[k].label} <b>${counts[k]}</b></span>`).join("");
+    // group mechanics into flow stages
+    const byStage={entry:[],engine:[],convert:[],retain:[]};
+    g.bm.forEach((b,i)=>{ byStage[CAT_STAGE[cats[i]]||"engine"].push({b,cat:cats[i]}); });
+    const flow=BM_STAGES.map((s,idx)=>{
+      let nodes=byStage[s.key].map(o=>{const m=BM_CATS[o.cat];
+        return `<span class="bm-node" style="--c:${m.color}"><span class="nc" style="color:${m.color}">${m.label}</span>${esc(o.b.name)}</span>`;}).join("");
+      if(!nodes) nodes = s.key==="entry" ? `<span class="bm-node ph">기본 무료(F2P) 진입</span>` : `<span class="bm-node ph">–</span>`;
+      const arrow = idx<BM_STAGES.length-1 ? `<div class="bm-arrow">→</div>` : "";
+      return `<div class="bm-stage"><h4>${s.icon} ${s.title}</h4>${nodes}</div>${arrow}`;
+    }).join("");
     const cards=g.bm.map((b,i)=>{const m=BM_CATS[cats[i]];
       return `<div class="bm-item" style="border-left-color:${m.color}">`
            + `<div class="bm-cat-tag" style="color:${m.color}">${m.label}</div>`
            + `<div class="n">${esc(b.name)}</div><div class="d">${esc(b.desc)}</div></div>`;}).join("");
-    html+=`<div class="card"><p class="sec-title">🎯 BM 구성요소 <span class="sec-note">· 유형별 색상 분류</span></p>
-      <div class="bm-compose"><div class="bm-bar">${bar}</div><div class="bm-legend">${legend}</div></div>
+    html+=`<div class="card"><p class="sec-title">🎯 BM 구조 <span class="sec-note">· 유입 → 몰입·경쟁 → 과금 전환 → 리텐션 흐름</span></p>
+      <div class="bm-flow">${flow}</div>
+      <div class="bm-legend bm-legend-sp">${legend}</div>
       <div class="bm-grid">${cards}</div></div>`;
   }
   if(g.notes && g.notes.length){
