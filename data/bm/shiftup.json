@@ -1,0 +1,97 @@
+{
+  "id": "shiftup",
+  "name": "SHIFT UP",
+  "overview": {
+    "tagline": "니케(서브컬처 가챠)와 스텔라 블레이드(콘솔 프리미엄 패키지) 두 축으로 고효율 흥행을 내며 2024년 코스피 상장에 성공.",
+    "summary": [
+      "김형태 대표의 아트·캐릭터 경쟁력을 앞세워 소수 타이틀로 높은 매출을 내는 고효율 개발사다.",
+      "'승리의 여신: 니케'는 서브컬처 수집형 가챠로 특히 일본에서 초대형 흥행, 회사 매출의 핵심이다(퍼블리싱: 텐센트 레벨인피니트).",
+      "'스텔라 블레이드'는 PS5 콘솔 프리미엄 패키지(후일 PC)로, 가챠 없는 패키지 판매 모델의 글로벌 성공을 입증했다.",
+      "니케(라이브 가챠)+스텔라 블레이드(패키지)의 상반된 BM 조합과 강한 IP로 2024년 7월 코스피 상장에 성공했다."
+    ],
+    "sources": [
+      {"title": "시프트업 - 나무위키", "url": "https://namu.wiki/w/%EC%8B%9C%ED%94%84%ED%8A%B8%EC%97%85"},
+      {"title": "《승리의 여신: 니케》 전 세계 누적 매출 10억 달러 달성 - Sensor Tower", "url": "https://sensortower.com/ko/blog/Goddess-of-Victory-Nikke-achieves-1-billion"}
+    ]
+  },
+  "games": [
+    {
+      "id": "nikke",
+      "name": "승리의 여신: 니케 (Goddess of Victory: NIKKE)",
+      "year": "2022",
+      "platform": "모바일·PC",
+      "oneLiner": "슈팅+수채화풍 캐릭터 연출의 서브컬처 수집형 RPG로, 캐릭터 확률형 가챠 중심의 글로벌(특히 일본) 초흥행작.",
+      "outcome": [
+        "2022년 11월 출시 후 글로벌 누적 매출 10억 달러(약 1조 3,579억 원)를 돌파, 이후 13억 달러(약 1조 9,474억 원) 이상으로 성장했다.",
+        "국가별 매출은 일본 약 50.3%, 한국 약 17.8%, 미국 약 16.8%로 일본 비중이 압도적이다.",
+        "고퀄 캐릭터·서사와 니어:오토마타 등 대형 콜라보로 일 매출 급증(콜라보 시 200%+)을 반복하며 장기 흥행 중이다."
+      ],
+      "bm": [
+        {"name": "캐릭터 가챠(확률형 모집)", "desc": "니케(캐릭터)를 확률형으로 모집. 상위 SSR·픽업 캐릭터 확보와 중첩(돌파)에 반복 과금을 유도."},
+        {"name": "천장·픽업", "desc": "일정 횟수 시 확정 지급하는 천장으로 목표 캐릭터 과금 예측성을 부여."},
+        {"name": "배틀패스·월정액", "desc": "시즌 패스·월간 상품으로 반복 결제(리텐션 매출)를 확보."},
+        {"name": "코스튬·스킨", "desc": "캐릭터 의상·스킨 등 코스메틱 판매."},
+        {"name": "콜라보 IP 이벤트", "desc": "니어:오토마타 등 인기 IP 콜라보로 한정 캐릭터·매출을 폭증시킴."}
+      ],
+      "keyNumbers": [
+        "글로벌 누적 매출 10억 달러(약 1조 3,579억) → 13억 달러+",
+        "매출 비중: 일본 50.3% / 한국 17.8% / 미국 16.8%",
+        "2022.11 출시"
+      ],
+      "sources": [
+        {"title": "《승리의 여신: 니케》, 글로벌 누적 매출 약 1조 3,579억 원 - 인벤", "url": "https://www.inven.co.kr/webzine/news/?news=307001"},
+        {"title": "《승리의 여신: 니케》 전 세계 누적 매출 10억 달러 달성 - Sensor Tower", "url": "https://sensortower.com/ko/blog/Goddess-of-Victory-Nikke-achieves-1-billion"}
+      ]
+    },
+    {
+      "id": "stellar-blade",
+      "name": "스텔라 블레이드 (Stellar Blade)",
+      "year": "2024",
+      "platform": "PS5·PC",
+      "oneLiner": "액션 어드벤처 콘솔 프리미엄 패키지로, 확률형 없이 본편 판매+PC 이식으로 글로벌 판매를 확장한 사례.",
+      "outcome": [
+        "2024년 4월 PS5 독점 출시 후 2개월 만에 100만 장 이상 판매했고, 소니로부터 로열티 약 220억 원($15.8M)을 수령했다.",
+        "2025년 6월 PC(스팀) 이식 후 3일 만에 PC 100만 장을 돌파, PS5+PC 누적 약 610만 장(추정, PS5 3.7M·PC 2.4M)으로 확대됐다.",
+        "가챠 없는 콘솔 프리미엄 모델의 글로벌 성공으로, 시프트업의 IP·개발력을 입증하고 상장 밸류를 뒷받침했다."
+      ],
+      "bm": [
+        {"name": "콘솔 프리미엄 패키지(B2P)", "desc": "약 $70 본편 판매가 핵심. 확률형 뽑기·인게임 강매 없음."},
+        {"name": "PC 이식 확장", "desc": "PS5 독점 후 PC(스팀) 이식으로 판매 대상을 확대(플랫폼 확장 매출)."},
+        {"name": "코스튬 DLC·콜라보", "desc": "의상 DLC·콜라보(니어 등)로 부가 매출과 화제성을 확보."},
+        {"name": "디럭스·콜렉터 에디션", "desc": "상위 에디션 판매로 객단가를 높임."}
+      ],
+      "keyNumbers": [
+        "출시 2개월 100만 장(2024.4 PS5)",
+        "PC 3일 만에 100만 장(2025.6)",
+        "PS5+PC 누적 약 610만 장(추정)",
+        "소니 로열티 약 220억 원($15.8M)"
+      ],
+      "sources": [
+        {"title": "Shift Up estimates Stellar Blade sold over 1 million copies - Game World Observer", "url": "https://gameworldobserver.com/2024/06/25/stellar-blade-sales-1m-copies-15-8-million-revenue"},
+        {"title": "Analysts claim Stellar Blade has sold over 6 million copies - KitGuru", "url": "https://www.kitguru.net/gaming/mustafa-mahmoud/analysts-claim-stellar-blade-has-sold-over-6-million-copies/"}
+      ]
+    },
+    {
+      "id": "destiny-child",
+      "name": "데스티니 차일드 (Destiny Child)",
+      "year": "2016",
+      "platform": "모바일",
+      "oneLiner": "라이브2D 일러스트를 앞세운 수집형 RPG로, 캐릭터 확률형 가챠 중심의 시프트업 초기 대표작.",
+      "outcome": [
+        "2016년 출시 초 국내 매출 상위권에 오르며 시프트업의 아트·캐릭터 IP 역량을 각인시켰다.",
+        "라이브2D 연출과 캐릭터성으로 서브컬처 팬덤을 확보, 이후 니케로 이어지는 노하우의 원형이 됐다."
+      ],
+      "bm": [
+        {"name": "캐릭터 가챠(확률형)", "desc": "차일드(캐릭터)를 확률형으로 획득·중첩하는 핵심 수집 과금."},
+        {"name": "스킨·코스튬", "desc": "라이브2D 스킨·의상 판매로 코스메틱 매출을 확보."},
+        {"name": "정기 상품·패스", "desc": "월정액·패스로 반복 결제를 유도."}
+      ],
+      "keyNumbers": [
+        "2016 출시 초 국내 매출 상위권"
+      ],
+      "sources": [
+        {"title": "데스티니 차일드 - 나무위키", "url": "https://namu.wiki/w/%EB%8D%B0%EC%8A%A4%ED%8B%B0%EB%8B%88%20%EC%B0%A8%EC%9D%BC%EB%93%9C"}
+      ]
+    }
+  ]
+}

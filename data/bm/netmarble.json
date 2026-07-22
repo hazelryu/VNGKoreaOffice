@@ -1,0 +1,114 @@
+{
+  "id": "netmarble",
+  "name": "NETMARBLE",
+  "overview": {
+    "tagline": "라이선스·자체 IP 기반 수집형 가챠와 리니지2 레볼루션식 고과금 MMORPG로 성장하고, 방치형·글로벌 IP(솔로 레벨링)로 다변화 중.",
+    "summary": [
+      "모바일 퍼블리싱·개발 강자로, 유명 IP(마블·일곱 개의 대죄·솔로 레벨링 등)를 활용한 수집형 가챠가 핵심 BM이다.",
+      "2016년 리니지2 레볼루션으로 고사양 모바일 MMORPG+확률형·거래 과금을 결합해 대형 매출을 냈다.",
+      "IP 로열티(외부 IP 라이선스) 지급 부담과 신작 성패에 따른 실적 변동성이 크다는 특징이 있다.",
+      "2023년 세븐나이츠 키우기(저과금 방치형), 2024년 나 혼자만 레벨업: 어라이즈(글로벌 액션 가챠)로 장르·지역을 다변화하며 흑자 전환에 성공했다."
+    ],
+    "sources": [
+      {"title": "넷마블 - 나무위키", "url": "https://namu.wiki/w/%EB%84%B7%EB%A7%88%EB%B8%94"},
+      {"title": "Netmarble swings to black in Q3 on steady-selling titles - Korea Herald", "url": "https://news.koreaherald.com/view.php?ud=20241107050812"}
+    ]
+  },
+  "games": [
+    {
+      "id": "solo-leveling-arise",
+      "name": "나 혼자만 레벨업: 어라이즈",
+      "year": "2024",
+      "platform": "모바일·PC",
+      "oneLiner": "인기 웹툰/애니 IP 기반 액션 RPG로, 헌터·무기 확률형 가챠와 배틀패스로 글로벌 매출을 견인한 넷마블의 반등작.",
+      "outcome": [
+        "2024년 5월 글로벌 출시 첫날 DAU 500만·매출 약 1,030만 달러를 기록했고, 3개월 만에 누적 매출 1억 달러를 돌파했다.",
+        "출시 6개월 누적 이용자 5,000만·모바일 매출 약 1억 3,890만 달러(추정)로, 넷마블 흑자 전환의 핵심 동력이 됐다.",
+        "출시 초 폭발 후 매출이 빠르게 하락(5월 5,890만→6월 3,080만→10월 700만 달러, 추정)하는 전형적 가챠 수명 곡선을 보였다."
+      ],
+      "bm": [
+        {"name": "헌터·무기 가챠(확률형)", "desc": "강력한 헌터·무기를 확률형 소환으로 획득. 상위 등급·중첩(돌파)에 반복 과금을 유도."},
+        {"name": "배틀패스·성장 패스", "desc": "시즌 패스로 확정 보상·재화를 제공하는 반복 매출원."},
+        {"name": "성장 재화·강화", "desc": "캐릭터·장비 강화 재화를 판매해 전투력 경쟁을 촉진."},
+        {"name": "IP 로열티 구조", "desc": "원작 IP(웹툰/애니) 라이선스를 활용, 로열티 지급을 수반하지만 강력한 팬덤 유입을 확보."}
+      ],
+      "keyNumbers": [
+        "출시 첫날 DAU 500만·매출 약 $10.3M (2024.5)",
+        "3개월 누적 매출 $100M 돌파",
+        "6개월 누적 이용자 5,000만·매출 약 $138.9M(추정)",
+        "한국 매출 비중 약 33%"
+      ],
+      "sources": [
+        {"title": "Solo Leveling: Arise revenue surpasses $100M in 3 months - Sensor Tower", "url": "https://sensortower.com/blog/solo-leveling-arise-revenue-surpasses-usd100-million-in-3-months"},
+        {"title": "Solo Leveling: Arise hits 50m players and $139m revenue in six months - PocketGamer.biz", "url": "https://www.pocketgamer.biz/solo-leveling-arise-hits-50m-players-and-139m-revenue-in-first-six-months/"}
+      ]
+    },
+    {
+      "id": "lineage2-revolution",
+      "name": "리니지2 레볼루션",
+      "year": "2016",
+      "platform": "모바일",
+      "oneLiner": "언리얼 엔진 고사양 모바일 MMORPG에 확률형·거래·혈맹 경쟁 과금을 결합해 모바일 MMORPG 대형화를 연 타이틀.",
+      "outcome": [
+        "2016년 말 출시 후 첫 달 매출 약 2,000억 원 이상(추정)으로 모바일 MMORPG 매출 기록을 세우며 넷마블 상장(2017)에 기여했다.",
+        "확률형·성장·거래 결합 BM이 이후 리니지라이크 모바일 MMORPG 유행의 초기 사례가 됐다.",
+        "리니지 IP 사용을 둘러싼 엔씨와의 관계·로열티 이슈가 따랐다."
+      ],
+      "bm": [
+        {"name": "확률형 장비·소환", "desc": "장비·성장 요소를 확률형으로 판매해 스펙 경쟁 과금을 유도."},
+        {"name": "성장 가속(경험치·재화)", "desc": "성장 속도를 높이는 유료 상품으로 상시 결제를 촉진."},
+        {"name": "혈맹·거래 경제", "desc": "혈맹 경쟁과 거래소 기반 경제로 지속 과금과 수수료 매출을 확보."}
+      ],
+      "keyNumbers": [
+        "출시 첫 달 매출 약 2,000억 원+ (추정, 2016)"
+      ],
+      "sources": [
+        {"title": "리니지2 레볼루션 - 나무위키", "url": "https://namu.wiki/w/%EB%A6%AC%EB%8B%88%EC%A7%802%20%EB%A0%88%EB%B3%BC%EB%A3%A8%EC%85%98"}
+      ]
+    },
+    {
+      "id": "seven-knights-idle",
+      "name": "세븐나이츠 키우기",
+      "year": "2023",
+      "platform": "모바일",
+      "oneLiner": "자체 IP 세븐나이츠를 방치형(idle)으로 재해석해, 상대적 저과금·간편함으로 흥행한 캐주얼 수집형.",
+      "outcome": [
+        "2023년 출시 후 방치형 특유의 낮은 진입장벽과 합리적 과금으로 국내 매출 상위권에 오르며 넷마블 실적 개선에 기여했다.",
+        "기존 고과금 MMORPG와 대비되는 저과금·캐주얼 노선의 성공 사례로 평가됐다."
+      ],
+      "bm": [
+        {"name": "방치형 성장 패키지", "desc": "자동 전투·성장에 맞춘 성장 가속·재화 패키지 중심의 라이트 과금."},
+        {"name": "캐릭터 가챠(확률형)", "desc": "영웅을 확률형으로 모집하되 방치형 특성상 과금 압박을 완화."},
+        {"name": "구독형 상품·패스", "desc": "월간·시즌 상품으로 반복 결제를 확보."}
+      ],
+      "keyNumbers": [
+        "2023 출시, 방치형 저과금으로 국내 매출 상위권"
+      ],
+      "sources": [
+        {"title": "세븐나이츠 키우기 - 나무위키", "url": "https://namu.wiki/w/%EC%84%B8%EB%B8%90%EB%82%98%EC%9D%B4%EC%B8%A0%20%ED%82%A4%EC%9A%B0%EA%B8%B0"}
+      ]
+    },
+    {
+      "id": "marvel-future-fight",
+      "name": "마블 퓨처파이트",
+      "year": "2015",
+      "platform": "모바일",
+      "oneLiner": "마블 IP 라이선스 기반 수집형 액션 RPG로, 글로벌 팬덤을 겨냥한 캐릭터 수집·성장 가챠의 장수 사례.",
+      "outcome": [
+        "마블 캐릭터 수집 욕구를 자극하는 가챠·성장 구조로 글로벌 장기 흥행(누적 매출 수억 달러대 추정)을 달성했다.",
+        "글로벌 라이선스 IP를 활용한 넷마블 해외 매출 확대 전략의 대표작."
+      ],
+      "bm": [
+        {"name": "캐릭터 수집 가챠", "desc": "마블 히어로를 확률형으로 수집하는 핵심 과금."},
+        {"name": "캐릭터 성장·계승", "desc": "티어 승급·잠재능력 등 성장 요소로 반복 과금을 유도."},
+        {"name": "IP 라이선스 콘텐츠", "desc": "영화·코믹스 연동 업데이트로 팬덤 결제를 촉진(로열티 수반)."}
+      ],
+      "keyNumbers": [
+        "글로벌 장기 흥행, 누적 매출 수억 달러대(추정)"
+      ],
+      "sources": [
+        {"title": "Marvel Future Fight - Wikipedia", "url": "https://en.wikipedia.org/wiki/Marvel_Future_Fight"}
+      ]
+    }
+  ]
+}

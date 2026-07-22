@@ -183,8 +183,12 @@ function route(){
 
 async function boot(){
   try{
-    const res=await fetch("data/bm.json",{cache:"no-store"});
-    DB=await res.json();
+    // Company data is split one-file-per-company under data/bm/ ; _index.json lists the ids.
+    const idx=await fetch("data/bm/_index.json",{cache:"no-store"}).then(r=>r.json());
+    const cos=await Promise.all(idx.map(id=>
+      fetch("data/bm/"+id+".json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)));
+    DB={companies:cos.filter(Boolean).sort((a,b)=>String(a.name).localeCompare(String(b.name),"en"))};
+    if(!DB.companies.length) throw new Error("no company data loaded");
     window.addEventListener("hashchange",route);
     route();
     document.getElementById("disc").innerHTML =
