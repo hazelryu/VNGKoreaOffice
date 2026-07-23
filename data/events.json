@@ -1,0 +1,275 @@
+{
+  "events": [
+    {
+      "id": "chinajoy-2026",
+      "name": "ChinaJoy 2026 (차이나조이)",
+      "date": "2026-07-31",
+      "endDate": "2026-08-03",
+      "category": "게임",
+      "scope": "해외",
+      "location": "중국 상하이 신국제엑스포센터(SNIEC)",
+      "url": "https://www.chinajoy.net",
+      "desc": "중국 최대 디지털 엔터테인먼트 전시회. 중국 퍼블리셔·판호 파트너 소싱과 현지 시장 트렌드(올해 슬로건 'Level up with AI') 파악의 핵심 무대."
+    },
+    {
+      "id": "bic-festival-2026",
+      "name": "BIC Festival 2026 (부산인디커넥트페스티벌)",
+      "date": "2026-08-14",
+      "endDate": "2026-08-16",
+      "category": "게임",
+      "scope": "국내",
+      "location": "부산 BEXCO 제1전시장",
+      "url": "https://bicfest.org",
+      "desc": "국내 대표 인디게임 축제(온라인 8/7~8/28 병행). 신선한 인디 IP·개발팀 초기 소싱과 퍼블리싱 리드 발굴에 유리."
+    },
+    {
+      "id": "pycon-korea-2026",
+      "name": "PyCon Korea 2026 (파이콘 한국)",
+      "date": "2026-08-15",
+      "endDate": "2026-08-17",
+      "category": "개발자",
+      "scope": "국내",
+      "location": "서울",
+      "url": "https://pycon.kr",
+      "desc": "국내 최대 파이썬 개발자 컨퍼런스. 데이터·백엔드·AI 엔지니어 네트워킹 및 기술 채용 트렌드 파악에 유용."
+    },
+    {
+      "id": "gamescom-dev-2026",
+      "name": "gamescom dev 2026 (구 Devcom)",
+      "date": "2026-08-23",
+      "endDate": "2026-08-25",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "독일 쾰른 Koelnmesse Confex",
+      "url": "https://dev.gamescom.global",
+      "desc": "gamescom 직전 열리는 유럽 최대 게임 개발자 B2B 행사. 매치메이킹으로 글로벌 스튜디오·퍼블리셔와 사전 미팅 세팅에 최적."
+    },
+    {
+      "id": "gamescom-2026",
+      "name": "gamescom 2026 (게임스컴)",
+      "date": "2026-08-26",
+      "endDate": "2026-08-30",
+      "category": "게임",
+      "scope": "해외",
+      "location": "독일 쾰른 Koelnmesse",
+      "url": "https://www.gamescom.global",
+      "desc": "세계 최대 게임쇼(ONL 8/25 개막). 유럽·글로벌 퍼블리싱/포팅/마케팅 파트너 미팅과 신작 트렌드 확인의 최우선 출장지."
+    },
+    {
+      "id": "if-kakao-2026",
+      "name": "if(kakao)26 카카오 개발자 컨퍼런스",
+      "date": "2026-09-16",
+      "category": "개발자",
+      "scope": "국내",
+      "location": "서울",
+      "url": "https://if.kakao.com",
+      "desc": "카카오 통합 기술 컨퍼런스. AI·클라우드·플랫폼 협업 접점 탐색에 활용 (예년 9월 개최, 일정 미확정/추정)."
+    },
+    {
+      "id": "tgs-2026",
+      "name": "도쿄게임쇼 2026 (Tokyo Game Show)",
+      "date": "2026-09-17",
+      "endDate": "2026-09-21",
+      "category": "게임",
+      "scope": "해외",
+      "location": "일본 지바 마쿠하리 멧세",
+      "url": "https://tgs.cesa.or.jp",
+      "desc": "30주년 첫 5일 개최. 일본·아시아 퍼블리셔 소싱과 콘솔/모바일 IP 확보, 현지 파트너 네트워킹의 핵심 무대."
+    },
+    {
+      "id": "samsung-sdc-2026",
+      "name": "Samsung Developer Conference 2026 (SDC)",
+      "date": "2026-10-03",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "미국 샌프란시스코",
+      "url": "https://developer.samsung.com/sdc",
+      "desc": "삼성 생태계(Galaxy·타이젠·XR) 개발자 행사. 디바이스 파트너십·크로스플랫폼 전략 확인 (일정 미확정/추정)."
+    },
+    {
+      "id": "steam-next-fest-2026-oct",
+      "name": "Steam Next Fest 2026 (October)",
+      "date": "2026-10-19",
+      "endDate": "2026-10-26",
+      "category": "게임",
+      "scope": "해외",
+      "location": "온라인 (Steam)",
+      "url": "https://store.steampowered.com",
+      "desc": "분기별 Steam 데모 페스티벌. 출시 전 자사/파트너 신작 위시리스트 확보와 PC 시장 반응 측정에 활용."
+    },
+    {
+      "id": "pgc-helsinki-2026",
+      "name": "Pocket Gamer Connects Helsinki 2026",
+      "date": "2026-10-13",
+      "endDate": "2026-10-14",
+      "category": "게임",
+      "scope": "해외",
+      "location": "핀란드 헬싱키",
+      "url": "https://www.pgconnects.com/helsinki",
+      "desc": "모바일 게임 비즈니스 중심 컨퍼런스. UA·퍼블리싱·투자 파트너 매칭과 북유럽 스튜디오 네트워킹에 유리."
+    },
+    {
+      "id": "naver-dan-2026",
+      "name": "네이버 DAN 2026 (팀네이버 통합 컨퍼런스)",
+      "date": "2026-11-06",
+      "endDate": "2026-11-07",
+      "category": "개발자",
+      "scope": "국내",
+      "location": "서울 COEX",
+      "url": "https://dan.naver.com",
+      "desc": "DEVIEW를 통합한 네이버 연례 컨퍼런스. AI·플랫폼·기술 트렌드와 국내 테크 파트너십 접점 파악 (일정 미확정/추정)."
+    },
+    {
+      "id": "unite-tokyo-2026",
+      "name": "Unite Tokyo 2026 (Unity)",
+      "date": "2026-11-17",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "일본 도쿄",
+      "url": "https://unity.com/events/unite-2026",
+      "desc": "Unity 공식 개발자 컨퍼런스. 엔진 로드맵·수익화(Unity Vector)·AI 툴 확인과 일본 개발 생태계 네트워킹."
+    },
+    {
+      "id": "korea-game-awards-2026",
+      "name": "2026 대한민국 게임대상",
+      "date": "2026-11-18",
+      "category": "게임",
+      "scope": "국내",
+      "location": "부산 BEXCO",
+      "url": "https://www.gstar.or.kr",
+      "desc": "지스타 전야제 성격의 국내 최고 권위 게임 시상식. 국내 주요 개발사·수상작 동향과 VIP 네트워킹 기회 (일정 미확정/추정)."
+    },
+    {
+      "id": "g-con-2026",
+      "name": "G-CON 2026 (지스타 컨퍼런스)",
+      "date": "2026-11-19",
+      "endDate": "2026-11-20",
+      "category": "개발자",
+      "scope": "국내",
+      "location": "부산 BEXCO",
+      "url": "https://gstar.or.kr/conference/conf_info.do",
+      "desc": "지스타 연계 개발자 컨퍼런스. 글로벌 연사 세션으로 개발·산업 트렌드 파악과 B2B 인사이트 확보."
+    },
+    {
+      "id": "g-star-2026",
+      "name": "지스타 2026 (G-STAR)",
+      "date": "2026-11-19",
+      "endDate": "2026-11-22",
+      "category": "게임",
+      "scope": "국내",
+      "location": "부산 BEXCO",
+      "url": "https://www.gstar.or.kr",
+      "desc": "국내 최대 국제 게임전시회(BTB 11/19~21). 국내외 퍼블리셔·투자사 집중 미팅과 신작 소싱의 연중 최대 BD 무대."
+    },
+    {
+      "id": "aws-reinvent-2026",
+      "name": "AWS re:Invent 2026",
+      "date": "2026-11-30",
+      "endDate": "2026-12-04",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "미국 라스베이거스",
+      "url": "https://reinvent.awsevents.com",
+      "desc": "AWS 최대 클라우드 컨퍼런스. 게임 인프라·라이브서비스·AI 스택 최신 동향과 클라우드 파트너십 검토에 유용."
+    },
+    {
+      "id": "agf-korea-2026",
+      "name": "AGF 2026 (Anime x Game Festival Korea)",
+      "date": "2026-12-04",
+      "endDate": "2026-12-06",
+      "category": "게임",
+      "scope": "국내",
+      "location": "고양 KINTEX 제1전시장",
+      "url": "https://www.agfkorea.com",
+      "desc": "애니메이션·게임 결합 IP 페스티벌. 서브컬처/콘솔 팬덤 트렌드와 IP 협업 파트너 접점 파악에 활용."
+    },
+    {
+      "id": "pgc-london-2027",
+      "name": "Pocket Gamer Connects London 2027",
+      "date": "2027-01-18",
+      "endDate": "2027-01-19",
+      "category": "게임",
+      "scope": "해외",
+      "location": "영국 런던",
+      "url": "https://www.pgconnects.com/london",
+      "desc": "연초 최대 모바일 게임 비즈니스 컨퍼런스. 글로벌 퍼블리싱·투자 파트너 미팅으로 한 해 파이프라인 세팅 (일정 미확정/추정)."
+    },
+    {
+      "id": "gdc-2027",
+      "name": "GDC 2027 (Game Developers Conference)",
+      "date": "2027-03-01",
+      "endDate": "2027-03-05",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "미국 샌프란시스코 Moscone Center",
+      "url": "https://gdconf.com",
+      "desc": "세계 최대 게임 개발자 컨퍼런스. 글로벌 스튜디오·기술·투자 네트워킹과 개발 트렌드 확보의 필수 출장."
+    },
+    {
+      "id": "nvidia-gtc-2027",
+      "name": "NVIDIA GTC 2027",
+      "date": "2027-03-15",
+      "endDate": "2027-03-18",
+      "category": "AI",
+      "scope": "해외",
+      "location": "미국 새너제이 & 온라인",
+      "url": "https://www.nvidia.com/gtc",
+      "desc": "AI·GPU 컴퓨팅 대표 컨퍼런스. 생성형 AI/그래픽스 기술과 게임 적용 사례, AI 파트너십 탐색 (일정 미확정/추정)."
+    },
+    {
+      "id": "playx4-2027",
+      "name": "PlayX4 2027 (플레이엑스포)",
+      "date": "2027-05-20",
+      "endDate": "2027-05-23",
+      "category": "게임",
+      "scope": "국내",
+      "location": "고양 KINTEX 제1전시장",
+      "url": "https://www.playx4.or.kr",
+      "desc": "수도권 대표 종합 게임쇼(B2B 병행). 국내 중소 개발사·인디 소싱과 아시아 바이어 매칭에 활용 (일정 미확정/추정)."
+    },
+    {
+      "id": "ai-expo-korea-2027",
+      "name": "AI EXPO KOREA 2027 (국제인공지능대전)",
+      "date": "2027-05-12",
+      "endDate": "2027-05-14",
+      "category": "AI",
+      "scope": "국내",
+      "location": "서울 COEX",
+      "url": "https://www.aiexpo.co.kr",
+      "desc": "국내 최대 AI B2B 전시회. AI 솔루션·스타트업 소싱과 게임 제작/운영 AI 도입 파트너 발굴에 유용 (일정 미확정/추정)."
+    },
+    {
+      "id": "microsoft-build-2027",
+      "name": "Microsoft Build 2027",
+      "date": "2027-05-18",
+      "endDate": "2027-05-20",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "미국 시애틀 & 온라인",
+      "url": "https://build.microsoft.com",
+      "desc": "MS 개발자 컨퍼런스. Azure·Copilot·Xbox/게이밍 클라우드 및 AI 개발 스택 동향 파악 (일정 미확정/추정)."
+    },
+    {
+      "id": "google-io-2027",
+      "name": "Google I/O 2027",
+      "date": "2027-05-18",
+      "endDate": "2027-05-19",
+      "category": "개발자",
+      "scope": "해외",
+      "location": "미국 마운틴뷰 & 온라인",
+      "url": "https://io.google",
+      "desc": "구글 연례 개발자 컨퍼런스(키노트 5/18). Android·AI(Gemini)·클라우드 최신 기술과 모바일 생태계 방향성 확인."
+    },
+    {
+      "id": "ndc-2027",
+      "name": "NDC 2027 (넥슨 개발자 컨퍼런스)",
+      "date": "2027-06-15",
+      "endDate": "2027-06-17",
+      "category": "개발자",
+      "scope": "국내",
+      "location": "경기 성남 판교 넥슨 사옥",
+      "url": "https://ndc.nexon.com",
+      "desc": "국내 최대 게임 개발자 컨퍼런스. 기획·프로덕션·AI 등 실무 인사이트와 국내 개발자 네트워킹 (일정 미확정/추정)."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache">
+<script src="auth.js"></script>
+<title>이벤트·컨퍼런스 · VNG Korea Office</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --panel:#ffffff; --ink:#1f2430; --muted:#8a92a6; --line:#e6e8ee;
+    --brand:#ec5e28; --brand-soft:#fff1ea; --accent:#3b5bdb;
+    --game:#ec5e28; --ai:#7048e8; --dev:#1c7ed6;
+    --shadow:0 1px 3px rgba(20,30,60,.06),0 6px 20px rgba(20,30,60,.05);
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{font-family:"Pretendard","Malgun Gothic","Segoe UI",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .site-nav{background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 1px 3px rgba(20,30,60,.04)}
+  .site-nav-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:24px;height:60px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand-mark{font-weight:900;font-size:26px;letter-spacing:-.06em;color:var(--brand);line-height:1}
+  .brand-div{width:1px;height:22px;background:var(--line)}
+  .brand-sub{font-size:13px;font-weight:700;color:var(--ink)}
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap}
+  .nav-links a{padding:8px 12px;border-radius:10px;font-size:13.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+  .nav-links a:hover{background:var(--bg);color:var(--ink)}
+  .nav-links a.active{background:var(--brand-soft);color:var(--brand)}
+
+  .wrap{max-width:1100px;margin:0 auto;padding:22px 20px 60px}
+  header.top{margin-bottom:16px}
+  header.top h1{font-size:20px;margin:0;letter-spacing:-.02em}
+  header.top .sub{color:var(--muted);font-size:13px;margin-top:3px}
+  .controls{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:14px 0}
+  .chips{display:flex;gap:5px;flex-wrap:wrap}
+  .fc{border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:var(--muted)}
+  .fc.on{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:700}
+  .fc.on.g{background:var(--game);border-color:var(--game)} .fc.on.a{background:var(--ai);border-color:var(--ai)} .fc.on.d{background:var(--dev);border-color:var(--dev)}
+  .toggle{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer}
+
+  .mgroup{margin-top:18px}
+  .mhead{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.03em;margin:0 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .ev{display:flex;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:13px 16px;margin-bottom:10px;cursor:pointer;align-items:flex-start}
+  .ev:hover{border-color:#cfd6e4}
+  .ev.nolink{cursor:default}
+  .ev .dt{flex:none;width:52px;text-align:center;border-right:1px solid var(--line);padding-right:12px}
+  .ev .dt .mo{font-size:11px;font-weight:700;color:var(--muted)}
+  .ev .dt .dd{font-size:22px;font-weight:900;line-height:1.05;letter-spacing:-.03em}
+  .ev .dt .rng{font-size:10px;color:var(--muted)}
+  .ev .body{flex:1;min-width:0}
+  .ev .nm{font-size:15px;font-weight:700;letter-spacing:-.01em}
+  .ev .tags{display:flex;flex-wrap:wrap;gap:6px;margin:5px 0}
+  .cat{font-size:10.5px;font-weight:800;padding:1px 8px;border-radius:5px;color:#fff}
+  .cat.게임{background:var(--game)} .cat.AI{background:var(--ai)} .cat.개발자{background:var(--dev)}
+  .loc{font-size:11px;color:var(--muted)} .loc b{color:var(--ink);font-weight:600}
+  .dday{font-size:10.5px;font-weight:800;padding:1px 8px;border-radius:20px;background:#fff4e6;color:#e8590c}
+  .dday.soon{background:#ffe3e3;color:#e03131}
+  .dday.past{background:#f1f3f5;color:#adb5bd}
+  .ev .desc{font-size:13px;color:#4b5266;margin-top:3px}
+  .loading{padding:60px;text-align:center;color:var(--muted)}
+  .foot{margin-top:16px;color:var(--muted);font-size:12px;text-align:center;line-height:1.7}
+  .foot a{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">VNG</span><span class="brand-div"></span><span class="brand-sub">Korea Office</span></a>
+    <nav class="nav-links">
+      <a href="index.html">📅 미팅 캘린더</a>
+      <a href="pipeline.html">🤝 파트너 파이프라인</a>
+      <a href="events.html" class="active">🗓️ 이벤트·컨퍼런스</a>
+      <a href="bm.html">🎮 게임사 BM</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <header class="top">
+    <h1>🗓️ 이벤트 · 컨퍼런스</h1>
+    <div class="sub">게임 · AI · 개발자 관련 행사 — 소싱·네트워킹·트렌드 파악용</div>
+  </header>
+  <div class="controls">
+    <div class="chips" id="catf">
+      <span class="fc on" data-c="">전체</span>
+      <span class="fc" data-c="게임">게임</span>
+      <span class="fc" data-c="AI">AI</span>
+      <span class="fc" data-c="개발자">개발자</span>
+    </div>
+    <div class="chips" id="scopef">
+      <span class="fc on" data-s="">국내+해외</span>
+      <span class="fc" data-s="국내">국내</span>
+      <span class="fc" data-s="해외">해외</span>
+    </div>
+    <label class="toggle"><input type="checkbox" id="showPast"> 지난 행사도 보기</label>
+  </div>
+  <div id="list"><div class="loading">불러오는 중…</div></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+let EVENTS=[], catF="", scopeF="", showPast=false;
+const TODAY=new Date();
+function esc(s){return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function d0(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate());}
+function parseD(s){const m=String(s||"").match(/^(\d{4})-(\d{2})-(\d{2})/);return m?new Date(+m[1],+m[2]-1,+m[3]):null;}
+function dday(dt){return Math.round((d0(dt)-d0(TODAY))/86400000);}
+const CATCLS={"게임":"g","AI":"a","개발자":"d"};
+
+function render(){
+  const items=EVENTS.map(e=>({e,dt:parseD(e.date)})).filter(x=>x.dt);
+  items.sort((a,b)=>a.dt-b.dt);
+  let html="", curMonth="", shown=0;
+  for(const {e,dt} of items){
+    const dd=dday(dt);
+    // upcoming = end date (or start) today-or-later
+    const endDt=parseD(e.endDate)||dt;
+    const isPast=dday(endDt)<0;
+    if(!showPast && isPast) continue;
+    if(catF && e.category!==catF) continue;
+    if(scopeF && e.scope!==scopeF) continue;
+    shown++;
+    const mk=dt.getFullYear()+"년 "+(dt.getMonth()+1)+"월";
+    if(mk!==curMonth){ if(curMonth) html+=`</div>`; html+=`<div class="mgroup"><div class="mhead">${mk}</div>`; curMonth=mk; }
+    const ddText = isPast ? "종료" : (dd===0?"D-DAY":(dd>0?"D-"+dd:""));
+    const ddCls = isPast ? "past" : (dd<=14?"soon":"");
+    const rng = e.endDate ? `~${(parseD(e.endDate).getMonth()+1)}/${parseD(e.endDate).getDate()}` : "";
+    const cat = e.category?`<span class="cat ${e.category}">${esc(e.category)}</span>`:"";
+    const scope = e.scope?`<span class="loc">${e.scope==='국내'?'🇰🇷 국내':'🌏 해외'}</span>`:"";
+    const loc = e.location?`<span class="loc">📍<b>${esc(e.location)}</b></span>`:"";
+    html+=`<div class="ev ${e.url?'':'nolink'}"${e.url?` data-href="${esc(e.url)}"`:""}>`
+        + `<div class="dt"><div class="mo">${dt.getMonth()+1}월</div><div class="dd">${dt.getDate()}</div><div class="rng">${rng}</div></div>`
+        + `<div class="body"><div class="nm">${esc(e.name)} ${ddText?`<span class="dday ${ddCls}">${ddText}</span>`:""}</div>`
+        + `<div class="tags">${cat}${scope}${loc}</div>`
+        + (e.desc?`<div class="desc">${esc(e.desc)}</div>`:"")
+        + `</div></div>`;
+  }
+  if(curMonth) html+=`</div>`;
+  if(!shown) html=`<div class="loading">해당 조건의 행사가 없습니다.</div>`;
+  const list=document.getElementById("list");
+  list.innerHTML=html;
+  list.querySelectorAll(".ev[data-href]").forEach(el=>el.addEventListener("click",()=>window.open(el.dataset.href,"_blank")));
+  document.getElementById("foot").innerHTML=`표시 ${shown}건 · 오늘 ${d0(TODAY).toISOString().slice(0,10)} 기준 · 데이터 출처: 공식 사이트·공개 일정 (매주 자동 갱신)`;
+}
+
+document.querySelectorAll("#catf .fc").forEach(el=>el.addEventListener("click",()=>{
+  document.querySelectorAll("#catf .fc").forEach(x=>x.classList.remove("on","g","a","d"));
+  el.classList.add("on"); catF=el.dataset.c||"";
+  if(catF==="게임")el.classList.add("g"); if(catF==="AI")el.classList.add("a"); if(catF==="개발자")el.classList.add("d");
+  render();
+}));
+document.querySelectorAll("#scopef .fc").forEach(el=>el.addEventListener("click",()=>{
+  document.querySelectorAll("#scopef .fc").forEach(x=>x.classList.remove("on")); el.classList.add("on"); scopeF=el.dataset.s||""; render();
+}));
+document.getElementById("showPast").addEventListener("change",e=>{showPast=e.target.checked;render();});
+
+async function boot(){
+  try{
+    const r=await fetch("data/events.json",{cache:"no-store"});
+    const j=await r.json();
+    EVENTS=(j&&j.events)||[];
+    render();
+  }catch(err){
+    document.getElementById("list").innerHTML=`<div class="loading">데이터를 불러오지 못했습니다.<br><small>${err}</small></div>`;
+  }
+}
+boot();
+</script>
+</body>
+</html>
